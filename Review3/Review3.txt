@@ -1,7 +1,7 @@
 E-Pariksha
 
 Table & Column name	---> Small case
-Teacher_tbl 		---> Remove added-date
+Student_tbl 		---> Remove added-date
 			     Replace by status-mark/isactive
 Subject_tbl		---> Add subject_desc
 Question_tbl		---> Remove Question_type
