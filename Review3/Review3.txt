@@ -1,0 +1,26 @@
+E-Pariksha
+
+Table & Column name	---> Small case
+Teacher_tbl 		---> Remove added-date
+			     Replace by status-mark/isactive
+Subject_tbl		---> Add subject_desc
+Question_tbl		---> Remove Question_type
+			     Replace by question_level	[Take to front]
+Result_tbl		---> result_status	[Add]
+
+
+
+*Database	--->Make Schema & Fill dummy data	{Think on flow}
+		    [Perform joins]
+*UI		--->Decent
+
+
+
+Group Members:-
+UI  	--->	Chandrakant Padme
+		Sagar Thorat
+		Pooja Patil
+
+Database--->	Pritam Kadam
+		Sumit Bonde
+		Abhijeet Mutkule	
