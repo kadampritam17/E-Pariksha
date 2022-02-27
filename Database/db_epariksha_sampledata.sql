@@ -1,6 +1,15 @@
 
 -- [This File Contains Sample Data of the E-pariksha Database]
 
+-- to load database use below command in Command Prompt
+--   mysql -u username -p password examdbtrial < db_epariksha_sampledata.sql 
+
+
+
+
+
+
+
 
 
 -- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
