@@ -452,7 +452,7 @@ pre {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: 150px; }
+  margin-left: auto; }
   @media (min-width: 576px) {
     .container {
       max-width: 540px; } }
@@ -8181,7 +8181,7 @@ h1, h2, h3, h4, h5,
   background-position: center center; }
 
 .wrap {
-  width: 150%;
+  width: 100%;
   overflow: hidden;
   background: #fff;
   border-radius: 5px;
