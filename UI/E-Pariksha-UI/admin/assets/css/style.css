@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #main {
   margin-top: 60px;
-  padding: 20px 30px;
+  padding: 20px 20px;
   transition: all 0.3s;
 }
 @media (max-width: 1199px) {
@@ -531,8 +531,8 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 60px;
   left: 0;
-  bottom: 0;
-  width: 300px;
+  bottom: 0px;
+  width: 250px;
   z-index: 996;
   transition: all 0.3s;
   padding: 20px;
@@ -558,7 +558,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1200px) {
   #main {
-    margin-left: 300px;
+    margin-left: 250px;
   }
 }
 @media (max-width: 1199px) {
@@ -1062,7 +1062,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 @media (min-width: 1400px) {
   #footer {
-    margin-left: 200px;
+    margin-left: 0px;
   }
 }
 .footer {
