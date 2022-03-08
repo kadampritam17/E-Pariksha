@@ -17,7 +17,8 @@
 <img height="40" src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-plain.svg">
 </p>
  <hr>
-## Project Contributors 👩‍💻👨‍💻 :
+ 
+<h2 align="center"> Project Contributors 👩‍💻👨‍💻 : </h2>
 <a href="https://github.com/kadampritam17/E-Pariksha/graphs/contributors">
- <img src="https://contributors-img.web.app/image?repo=kadampritam17/E-Pariksha"/>
+ <img src="https://contributors-img.web.app/image?repo=kadampritam17/E-Pariksha" />
 </a>
