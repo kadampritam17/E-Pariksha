@@ -51,8 +51,6 @@
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
-
-
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -159,11 +157,11 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Student</h1>
+            <h1>Exam</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active"><a href="student.html">Student</a></li>
+                    <li class="breadcrumb-item active"><a href="exam.html">Exam</a></li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -174,7 +172,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Add Student</h5>
+                            <h5 class="card-title">Add Exam</h5>
                             <!--   <p>Browser default validation with using the <code>required</code> keyword. Try submitting the form below. Depending on your browser and OS, you’ll see a slightly different style of feedback.</p>
    -->
                             <!-- Browser Default Validation -->
@@ -184,41 +182,64 @@
                                     <input type="hidden" class="form-control" id="validationDefault01" value="id" name="id" placeholder="Id"
                                         required>
                                 </div> -->
+                                
+
                                 <div class="col-md-6">
-                                    <label for="validationDefault01" class="form-label">First name</label>
-                                    <input type="text" class="form-control" id="validationDefault01" value="" name="first_name" placeholder="First name"
+                                    <label for="validationDefault01" class="form-label">Subject</label>
+                                    <select class="form-select" id="floatingSelect" >
+                                      <option selected>Select</option>
+                                      <option value="1">java</option>
+                                      <option value="2">OS</option>
+                                      <option value="3">DSA</option>
+                                    </select>
+                                 </div>
+              
+                                 <div class="col-md-6">
+                                    <label for="validationDefault01" class="form-label">Subject Name</label>
+                                    <input type="text" class="form-control" id="validationDefault01" name="subject_name" placeholder="Subject name"
+                                        required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="validationDefault01" class="form-label">Exam Name</label>
+                                    <input type="text" class="form-control"  name="exam_name" placeholder="Subject name"
+                                        required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="validationDefault01" class="form-label">Import File</label>
+                                    <input type="file" class="form-control" name="import_file" placeholder="Subject name"
+                                        required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="validationDefault01" class="form-label">Exam Date</label>
+                                    <input type="date" class="form-control" id="validationDefault01"  name="exam_date"
                                         required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="validationDefault02" class="form-label">Last name</label>
-                                    <input type="text" class="form-control" id="validationDefault02" value="" name="last_name" placeholder="Last name"
+                                    <label for="validationDefault01" class="form-label">Exam Time</label>
+                                    <input type="time" class="form-control"  name="exam_time" "
                                         required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="validationDefault02" class="form-label">Mobile No</label>
-                                    <input type="number" class="form-control" id="validationDefault02" value="" name="mob_no" placeholder="Moblie No"
+                                    <label for="validationDefault01" class="form-label">Login Time</label>
+                                    <input type="time" class="form-control" id="validationDefault01" name="login_time" 
                                         required>
                                 </div>
+                                
+                                
                                 <div class="col-md-6">
-                                    <label for="validationDefault02" class="form-label">Date of Birth</label>
-                                    <input type="date" class="form-control" id="validationDefault02" value="" name="dob" placeholder="Date of Birth"
-                                        required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="validationDefault02" class="form-label">User Name</label>
-                                    <input type="text" class="form-control" id="validationDefault02" value="" name="user_name" placeholder="Enter Your PRN No."
-                                        required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="validationDefault02" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="validationDefault02" value="" name="password" placeholder="Password"
-                                        required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="validationDefault02" class="form-label">Email ID</label>
-                                    <input type="email" class="form-control" id="validationDefault02" value="" name="email" placeholder="Email ID"
-                                        required>
-                                </div>
+                                    <label for="validationDefault01" class="form-label">Exam Level</label>
+                                    <select class="form-select" id="floatingSelect" >
+                                      <option selected>Select</option>
+                                      <option value="1">Easy</option>
+                                      <option value="2">Medium</option>
+                                      <option value="3">Hard</option>
+                                    </select>
+                                 </div>
+                  
+                                
                                 <!-- <div class="col-md-6">
                                     <label for="validationDefault04" class="form-label">Subject</label>
                                     <select class="form-select" multiple  id="validationDefault04" required>
@@ -229,22 +250,7 @@
                                         <option>DS</option>
                                     </select>
                                 </div> -->
-                                <div class="col-md-6">
-                                    <label for="validationDefault02" class="form-label">SSC Percentage</label>
-                                    <input type="number" class="form-control" id="validationDefault02" value="" name="qualification" placeholder="SSC Percentage"
-                                        required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="validationDefault02" class="form-label">HSC Percentage</label>
-                                    <input type="number" class="form-control" id="validationDefault02" value="" name="qualification" placeholder="HSC Percentage"
-                                        required>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="validationDefault02" class="form-label">Degree Percentage</label>
-                                    <input type="number" class="form-control" id="validationDefault02" value="" name="qualification" placeholder="Degree Percentage"
-                                        required>
-                                </div>
+                               
                                 
                                 
                                                                 
