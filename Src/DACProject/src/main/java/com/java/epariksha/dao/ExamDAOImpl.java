@@ -9,7 +9,7 @@ import com.java.epariksha.entity.Exam;
 import com.java.epariksha.repository.ExamRepository;
 
 @Service
-public class ExamDAOImpl {
+public class ExamDAOImpl implements ExamDAO {
 
 	@Autowired
 	ExamRepository examRepository;

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.java.epariksha.dao.SubjectDAO;
+import com.java.epariksha.dao.SubjectDAOImpl;
 import com.java.epariksha.entity.Subject;
 
 
@@ -21,7 +21,7 @@ import com.java.epariksha.entity.Subject;
 public class SubjectController {
 
 	@Autowired
-	SubjectDAO dao;
+	SubjectDAOImpl dao;
 
 	ModelAndView mv = new ModelAndView(); 
 
