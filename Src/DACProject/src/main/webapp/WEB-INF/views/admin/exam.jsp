@@ -58,14 +58,14 @@
 								</tr>
 							</thead>
 							<tbody>
-							<%
+								<%
 								for (Exam al : list) {
 								%>
 								<tr>
 									<td scope="row"><%=al.getExamId()%></td>
 									<td scope="col"><%=al.getExamName()%></td>
 									<td scope="col"><%=al.getExamName()%>Teacher Name</td>
-									<td scope="col"><%=al.getExamDate() %></td>
+									<td scope="col"><%=al.getExamDate()%></td>
 									<td scope="col"><%=al.getNoOfQuestion()%></td>
 									<td scope="col"><%=al.getMarks()%></td>
 									<td scope="col"><%=al.getActualTime()%></td>
@@ -79,7 +79,6 @@
 								<%
 								}
 								%>
-								
 							</tbody>
 						</table>
 						<!-- End Table with stripped rows -->
