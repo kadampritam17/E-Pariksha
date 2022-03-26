@@ -52,7 +52,7 @@
 									<button type="submit"
 										class="form-control btn btn-primary rounded submit px-3">Login</button>
 								</div>
-								<div class="form-group d-md-flex">
+								<!-- <div class="form-group d-md-flex">
 									<div class="w-50 text-left">
 										<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
 											<input type="checkbox" checked>
@@ -62,9 +62,9 @@
 									<div class="w-50 text-md-right">
 										<a href="#">Forgot Password</a>
 									</div>
-								</div>
+								</div> -->
 							</form>
-							<p class="text-center"><a data-toggle="tab" href="#signup">Sign Up</a></p>
+							<!-- <p class="text-center"><a data-toggle="tab" href="#signup">Sign Up</a></p> -->
 						</div>
 					</div>
 				</div>

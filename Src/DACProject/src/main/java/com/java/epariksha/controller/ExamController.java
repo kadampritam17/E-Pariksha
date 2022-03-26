@@ -14,14 +14,10 @@ import com.java.epariksha.entity.Exam;
 public class ExamController {
 
 	
-
-	@GetMapping("/admin/exam")
-	public String f4()
-	{
-		return "admin/exam";
-	}
-	
-	
+	/*
+	 * @GetMapping("/admin/exam") public String f4() { return "admin/exam"; }
+	 * 
+	 */
 	
 	@Autowired
 	ExamDAOImpl dao;
