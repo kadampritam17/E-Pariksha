@@ -1,0 +1,7 @@
+
+
+//insert teacher
+insert into teacher_info_tbl values(1, "1111-01-01","teacher@gmail.com", 5, "saleel", "badge", 9988778899, "teacher", 7, "teacher123");
+
+//insert student
+insert into student_info_tbl values(1, 90, "1111-01-01","student@gmail.com", "pritam", 81, "kadam", 9966336699, "student", 70, "student123", 10,20,30);
