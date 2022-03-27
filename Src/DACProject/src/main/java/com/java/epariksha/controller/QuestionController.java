@@ -23,14 +23,10 @@ public class QuestionController {
 	@Autowired
 	QuestionDAOImpl dao;
 
-	ModelAndView mv = new ModelAndView();
-
+	
 	@GetMapping("/admin/question")
-	public ModelAndView admin_question() {
-		List<Question> list = dao.getAll();
-		mv.addObject("questions", list); // request.setAttribute
-		mv.setViewName("admin/question");
-		return mv;
+	public List<Question> admin_question() {
+		return dao.getAll();
 	}
 
 	/*
