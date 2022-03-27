@@ -26,13 +26,13 @@
 			</nav>
 		</div>
 		<!-- End Page Title -->
-
+<%
+Subject subject =  (Subject)request.getAttribute("subject");
+	%>
 		<section class="section">
 			<div class="row">
 				<div class="col-lg-12">
-<%
-Subject subject =  (Subject)request.getAttribute("subjects");
-	%>
+	
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">Update Subject</h5>
@@ -56,8 +56,7 @@ Subject subject =  (Subject)request.getAttribute("subjects");
 
 								<div class="col-md-6">
 									<label for="validationDefault01" class="form-label">Description</label>
-									<textarea class="form-control" style="height: 100px"
-										value="<%= subject.getSubjectDescription() %>" name="subject_description"></textarea>
+									<textarea class="form-control" style="height: 100px" value="<%= subject.getSubjectDescription() %>" name="subject_description"></textarea>
 								</div>
 
 
