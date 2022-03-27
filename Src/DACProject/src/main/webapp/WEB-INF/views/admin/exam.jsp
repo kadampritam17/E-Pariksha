@@ -73,8 +73,8 @@
 									<td scope="col"><%=al.getExamStatus()%></td>
 									<td scope="col"><%=al.getExamLevel()%></td>
 									<td scope="col"><a href="exam_update"
-										class="btn btn-primary">Update</a><a href="#"
-										class="btn btn-danger">delete</a></td>
+										class="btn btn-primary"><i class="bi-pencil"></i></a><a href="#"
+										class="btn btn-danger"><i class="bi-trash"></i></a></td>
 								</tr>
 								<%
 								}

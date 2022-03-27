@@ -19,7 +19,7 @@ public class Question1Controller {
 	ModelAndView mv = new ModelAndView(); 
 	
 	
-	@GetMapping("/admin/question")
+	@GetMapping("/admin/question1")
 	public ModelAndView admin_question() 
 	{
 		List<Question> list = dao.getAll();

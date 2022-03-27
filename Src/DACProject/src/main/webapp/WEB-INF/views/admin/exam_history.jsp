@@ -19,8 +19,8 @@
 		<h1>Exam History</h1>
 		<nav>
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-				<li class="breadcrumb-item active"><a href="examhistory.html">Exam
+				<li class="breadcrumb-item"><a href="admin/home">Home</a></li>
+				<li class="breadcrumb-item active"><a href="exam_history">Exam
 						History</a></li>
 			</ol>
 		</nav>
@@ -71,8 +71,8 @@
 									<td scope="col"><%=al.getExamStatus()%></td>
 									<td scope="col"><%=al.getExamLevel()%></td>
 									<td scope="col"><a href="exam_update"
-										class="btn btn-primary">Update</a><a href="#"
-										class="btn btn-danger">delete</a></td>
+										class="btn btn-primary"><i class="bi-pencil"></i></a><a href="#"
+										class="btn btn-danger"><i class="bi-trash"></i></a></td>
 								</tr>
 								<%
 								}

@@ -17,8 +17,8 @@
 			<h1>Subject</h1>
 			<nav>
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-					<li class="breadcrumb-item active"><a href="subject.html">Subject</a></li>
+					<li class="breadcrumb-item"><a href="admin/home">Home</a></li>
+					<li class="breadcrumb-item active"><a href="subject">Subject</a></li>
 				</ol>
 			</nav>
 		</div>
@@ -34,7 +34,7 @@
 							<!--   <p>Browser default validation with using the <code>required</code> keyword. Try submitting the form below. Depending on your browser and OS, you’ll see a slightly different style of feedback.</p>
    -->
 							<!-- Browser Default Validation -->
-							<form class="row g-3" method="post" action="add_subject">
+							<form class="row g-3" method="post" action="subject_add">
 								<!-- <div class="col-md-6">
                                     <label for="validationDefault01" class="form-label">ID</label>
                                     <input type="hidden" class="form-control" id="validationDefault01" value="id" name="id" placeholder="Id"

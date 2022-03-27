@@ -18,10 +18,10 @@ public class QuestionDAOImpl implements QuestionDAO {
 	public List<Question> getAll() {
 		return questionRepository.findAll();
 	}
-
-
+	
+	
 	public Object save(Question que) {
 		// TODO Auto-generated method stub
-		return null;
+		return questionRepository.save(que);
 	}
 }
