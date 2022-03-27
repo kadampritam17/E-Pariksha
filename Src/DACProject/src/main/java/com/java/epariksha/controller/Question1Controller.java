@@ -7,25 +7,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.java.epariksha.dao.TeacherDAOImpl;
-import com.java.epariksha.entity.Teacher;
+import com.java.epariksha.dao.QuestionDAOImpl;
+import com.java.epariksha.entity.Question;
 
 @Controller
-public class TeacherController {
+public class Question1Controller {
 
-	
 	@Autowired
-	TeacherDAOImpl dao;
+	QuestionDAOImpl dao;
 
 	ModelAndView mv = new ModelAndView(); 
 	
 	
-	@GetMapping("/admin/teacher")
-	public ModelAndView admin_teacher() 
+	@GetMapping("/admin/question1")
+	public ModelAndView admin_question() 
 	{
-		List<Teacher> list = (List<Teacher>) dao.getAll();
-		mv.addObject("teachers", list); //request.setAttribute
-		mv.setViewName("admin/teacher");
+		List<Question> list = dao.getAll();
+		mv.addObject("questions", list); //request.setAttribute
+		mv.setViewName("admin/question");
 		return mv;
 	}
+	
 }

@@ -37,7 +37,7 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="card-title">
-							<a href="add_subject" class="btn btn-primary">Add Subject</a>
+							<a href="subject_add" class="btn btn-primary">Add Subject</a>
 						</div>
 						<!--  <h5 class="card-title">Datatables</h5>
               					<p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>-->
@@ -61,8 +61,8 @@
 									<td scope="col"><%=al.getSubjectDescription()%></td>
 									<td scope="col"><a
 										href="subject_update/<%=al.getSubjectId()%>"
-										class="btn btn-primary">Update</a> <a
-										href="delete/<%=al.getSubjectId()%>" class="btn btn-danger">delete</a></td>
+										class="btn btn-primary"><i class="bi-pencil"></i></a> <a
+										href="delete/<%=al.getSubjectId()%>" class="btn btn-danger"><i class="bi-trash"></i></a></td>
 								</tr>
 								<%
 								}

@@ -37,7 +37,7 @@
 
 
 		<li class="nav-item">
-			<a class="nav-link collapsed" href="examhistory"> 
+			<a class="nav-link collapsed" href="exam_history"> 
 				<i class="bi bi-box-arrow-in-right"></i><span>Exam History</span>
 			</a>
 		</li>
