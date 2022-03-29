@@ -68,10 +68,6 @@ public class Student {
 	private double degreePercentage;
 	
 	
-	@Column(name = "student_is_active")  //boolean
-	private boolean isActive;
-	
-	
 	public Student() {
 		super();
 	}
@@ -79,7 +75,7 @@ public class Student {
 
 	public Student(int studentId, List<Result> result, String firstName, String lastName, double mobileNo, Date dob,
 			String userName, String password, String emailId, double sscPercentage, double hscPercentage,
-			double degreePercentage, boolean isActive) {
+			double degreePercentage) {
 		super();
 		this.studentId = studentId;
 		this.result = result;
@@ -93,7 +89,19 @@ public class Student {
 		this.sscPercentage = sscPercentage;
 		this.hscPercentage = hscPercentage;
 		this.degreePercentage = degreePercentage;
-		this.isActive = isActive;
+	}
+
+
+	public Student(String firstName, String lastName, double mobno, Date dob, String username, String password,
+			String emailid) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mobileNo = mobno;
+		this.dob = dob;
+		this.userName = username;
+		this.password = password;
+		this.emailId = emailid;
 	}
 
 
@@ -217,25 +225,17 @@ public class Student {
 	}
 
 
-	public boolean getIsActive() {
-		return isActive;
-	}
-
-
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
-	}
-
-
 	@Override
 	public String toString() {
 		return "studentId=" + studentId + ", result=" + result + ", firstName=" + firstName + ", lastName="
 				+ lastName + ", mobileNo=" + mobileNo + ", dob=" + dob + ", userName=" + userName + ", password="
 				+ password + ", emailId=" + emailId + ", sscPercentage=" + sscPercentage + ", hscPercentage="
-				+ hscPercentage + ", degreePercentage=" + degreePercentage + ", isActive=" + isActive ;
+				+ hscPercentage + ", degreePercentage=" + degreePercentage;
 	}
 
-
+	
+	
+	
 	
 	
 }
