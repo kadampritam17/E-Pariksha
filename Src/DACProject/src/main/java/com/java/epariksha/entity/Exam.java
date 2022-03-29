@@ -2,12 +2,15 @@ package com.java.epariksha.entity;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -21,18 +24,9 @@ public class Exam {
 	private int examId;
 	
 	
-//	@JoinColumn(name="exam_info_tbl",nullable=false)
-//	//@JoinColumn(name="exam_id",nullable=false)
-//	private List<ExamQuestionMap> examQuestion;
+	@OneToMany(mappedBy = "exam")
+	private List<ExamQuestionMap> examQuestion;
 	
-	//@Column(name = "subject_id")  //FK int
-//	@ManyToOne
-//	private Subject subject123;
-	
-	
-	//@Column(name = "teacher_id")  //FK  int
-//	@ManyToOne
-//	private Teacher teacher;
 	
 	
 	@Column(name = "exam_name")  //varchar

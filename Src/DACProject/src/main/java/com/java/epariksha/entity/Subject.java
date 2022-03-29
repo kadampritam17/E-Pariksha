@@ -12,6 +12,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 @Table(name = "subject_info_tbl")
 public class Subject {
@@ -27,9 +30,14 @@ public class Subject {
 	private List<Exam> exam;
 	
 	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="subject_id",nullable=false)
+	@OneToMany(cascade=CascadeType.ALL, mappedBy = "subject")
 	private List<Question> question;
+	
+	
+	@JsonCreator(mode = JsonCreator.Mode.DELEGATING)
+	private Subject (@JsonProperty("subjectId") Integer subject ) {
+	    this.subjectId = subject;
+	}
 	
 	
 //	@OneToMany(cascade=CascadeType.ALL)

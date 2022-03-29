@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,14 +19,15 @@ public class Result {
 	@Column(name="result_id",unique=true,nullable=false) //primary key int
 	private int resultId;
 	
-	//@Column(name = "student_id") //from student table 
-	//FK int
-//	@ManyToOne
-//	private Student student;
 	
-	//@Column(name = "exam_id") //FK int
-//	@ManyToOne
-//	private Exam exam;
+	@ManyToOne
+	@JoinColumn(name="student_id")
+	private Student student;
+	
+
+	@ManyToOne
+	@JoinColumn(name="exam_id")
+	private Exam exam;
 	
 	@Column(name = "marks") //int
 	private int marks;

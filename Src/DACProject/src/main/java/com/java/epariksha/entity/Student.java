@@ -23,8 +23,7 @@ public class Student {
 	@Column(name="student_id",unique=true,nullable=false) //primary key int
 	private int studentId;
 	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="student_id",nullable=false)
+	@OneToMany(cascade=CascadeType.ALL,mappedBy = "student")
 	private List<Result> result;
 	
 	
@@ -68,6 +67,10 @@ public class Student {
 	private double degreePercentage;
 	
 	
+	@Column(name = "student_is_active")  //boolean
+	private boolean isActive;
+	
+	
 	public Student() {
 		super();
 	}
@@ -75,7 +78,7 @@ public class Student {
 
 	public Student(int studentId, List<Result> result, String firstName, String lastName, double mobileNo, Date dob,
 			String userName, String password, String emailId, double sscPercentage, double hscPercentage,
-			double degreePercentage) {
+			double degreePercentage, boolean isActive) {
 		super();
 		this.studentId = studentId;
 		this.result = result;
@@ -89,19 +92,7 @@ public class Student {
 		this.sscPercentage = sscPercentage;
 		this.hscPercentage = hscPercentage;
 		this.degreePercentage = degreePercentage;
-	}
-
-
-	public Student(String firstName, String lastName, double mobno, Date dob, String username, String password,
-			String emailid) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.mobileNo = mobno;
-		this.dob = dob;
-		this.userName = username;
-		this.password = password;
-		this.emailId = emailid;
+		this.isActive = isActive;
 	}
 
 
@@ -225,17 +216,25 @@ public class Student {
 	}
 
 
+	public boolean getIsActive() {
+		return isActive;
+	}
+
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+
+
 	@Override
 	public String toString() {
 		return "studentId=" + studentId + ", result=" + result + ", firstName=" + firstName + ", lastName="
 				+ lastName + ", mobileNo=" + mobileNo + ", dob=" + dob + ", userName=" + userName + ", password="
 				+ password + ", emailId=" + emailId + ", sscPercentage=" + sscPercentage + ", hscPercentage="
-				+ hscPercentage + ", degreePercentage=" + degreePercentage;
+				+ hscPercentage + ", degreePercentage=" + degreePercentage + ", isActive=" + isActive ;
 	}
 
-	
-	
-	
+
 	
 	
 }
