@@ -41,8 +41,6 @@ public class Question {
 	    subject.setSubjectId(subjectId);
 	}
 
-	
-
 
 	public List<ExamQuestionMap> getExamquestion() {
 		return examquestion;

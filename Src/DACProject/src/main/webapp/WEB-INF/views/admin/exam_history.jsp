@@ -27,7 +27,7 @@
 	</div>
 	<!-- End Page Title -->
 	<%
-	List<Exam> list = (List<Exam>) request.getAttribute("exams");
+	List<Exam> list = (List<Exam>) request.getAttribute("exams_history");
 	%>
 	<section class="section">
 		<div class="row">

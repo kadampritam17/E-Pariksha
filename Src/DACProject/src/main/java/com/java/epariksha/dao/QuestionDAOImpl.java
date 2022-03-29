@@ -20,8 +20,8 @@ public class QuestionDAOImpl implements QuestionDAO {
 	}
 	
 	
-	public Object save(Question que) {
-		// TODO Auto-generated method stub
-		return questionRepository.save(que);
+	public String save(Question que) {
+		questionRepository.save(que);
+		return "success";
 	}
 }

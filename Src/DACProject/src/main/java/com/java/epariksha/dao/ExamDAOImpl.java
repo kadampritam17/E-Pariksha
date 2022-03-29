@@ -19,4 +19,9 @@ public class ExamDAOImpl implements ExamDAO {
 		return examRepository.findAll();
 	}
 
+
+	public List<Exam> getAllPreviousExams() {
+		return examRepository.findAllPreviousExams();
+	}
+
 }
