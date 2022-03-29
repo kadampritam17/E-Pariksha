@@ -92,7 +92,22 @@ public class Student {
 		this.sscPercentage = sscPercentage;
 		this.hscPercentage = hscPercentage;
 		this.degreePercentage = degreePercentage;
-		this.isActive = isActive;
+		this.isActive = true;
+	}
+
+
+
+	public Student(String firstName, String lastName, double mobileNo, Date dob, String userName, String password,
+			String emailId) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mobileNo = mobileNo;
+		this.dob = dob;
+		this.userName = userName;
+		this.password = password;
+		this.emailId = emailId;
+		this.isActive = true;
 	}
 
 

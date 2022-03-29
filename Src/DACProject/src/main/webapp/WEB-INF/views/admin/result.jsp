@@ -54,9 +54,9 @@
 								%>
                                     <tr>
                                         <td scope="row"><%=al.getResultId()%></td>
-									<td scope="col"><%=al.getStudentId()%></td>
+									<td scope="col"><%=al.getStudent()%></td>
 									<td scope="col"><%=al.getMarks()%></td>
-									<td scope="col"><%=al.getExamName()%></td>
+									<td scope="col"><%=al.getExam()%></td>
                                     </tr>
                                     <%
 								}
