@@ -1,13 +1,13 @@
 package com.java.epariksha.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -69,13 +69,15 @@ public class SubjectController {
 		return mv;
 	}
 	
-	@PostMapping("/subject_update/{id}")
-	public ModelAndView update_subject(@PathVariable int id, @RequestParam("subject_name") String subjectName, @RequestParam("subject_description") String subjectDescription) 
+	@PostMapping("/subject_update")
+	public ModelAndView update_subject(@RequestBody Subject subject) 
+	//public ModelAndView update_subject(@PathVariable int id, @RequestParam("subject_name") String subjectName, @RequestParam("subject_description") String subjectDescription) 
 	{
-		Subject subject = new Subject(  );
-		subject.setSubjectId(id);
-		subject.setSubjectName(subjectName.trim());
-		subject.setSubjectDescription(subjectDescription.trim());
+//		Subject subject = new Subject(  );
+//		subject.setSubjectId(id);
+//		subject.setSubjectName(subjectName.trim());
+//		subject.setSubjectDescription(subjectDescription.trim());
+		System.out.println("subject"+subject);
 		dao.update(subject);
 		mv.addObject("subject", subject); //request.setAttribute
 		mv.setViewName("redirect:/admin/subject");
