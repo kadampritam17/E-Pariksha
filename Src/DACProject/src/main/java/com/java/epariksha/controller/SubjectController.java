@@ -69,7 +69,7 @@ public class SubjectController {
 		return mv;
 	}
 	
-	@PostMapping("/subject_update")
+	@PostMapping("/subject_update11")
 	public ModelAndView update_subject(@RequestBody Subject subject) 
 	//public ModelAndView update_subject(@PathVariable int id, @RequestParam("subject_name") String subjectName, @RequestParam("subject_description") String subjectDescription) 
 	{
@@ -77,6 +77,7 @@ public class SubjectController {
 //		subject.setSubjectId(id);
 //		subject.setSubjectName(subjectName.trim());
 //		subject.setSubjectDescription(subjectDescription.trim());
+		System.out.println("subject");
 		System.out.println("subject"+subject);
 		dao.update(subject);
 		mv.addObject("subject", subject); //request.setAttribute
