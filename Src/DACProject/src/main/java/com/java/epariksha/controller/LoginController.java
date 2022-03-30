@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.java.epariksha.dao.LoginDAO;
+import com.java.epariksha.dao.TeacherDAOImpl;
 import com.java.epariksha.entity.Student;
 import com.java.epariksha.entity.Teacher;
 
@@ -23,9 +24,13 @@ public class LoginController {
 
 	@Autowired
 	LoginDAO dao;
+	
+	@Autowired
+	TeacherDAOImpl teacherDao;
 		
 	ModelAndView mv = new ModelAndView();
 	
+	//done
 	@GetMapping("/admin_login")
 	public ModelAndView admin_login()
 	{
@@ -36,11 +41,13 @@ public class LoginController {
 	
 	
 	@PostMapping("/admin/home")
-	public ModelAndView admin_login(@RequestParam String username, @RequestParam String password)
+	public ModelAndView admin_login(@RequestParam String username, @RequestParam String password, HttpSession session)
 	{
 		if(username.equalsIgnoreCase("admin@gmail.com") && password.equals("admin"))
 		{
+			
 			System.out.println("adminlogin success");
+			session.setAttribute("username", username);
 			mv.setViewName("admin/home");
 			return mv;
 		}
@@ -50,12 +57,18 @@ public class LoginController {
 			mv.setViewName("redirect:/admin_login");
 			return mv;	
 		}
-		
-		
 	}
 	
 	
-
+	@RequestMapping(value = "/admin/adminlogout", method = RequestMethod.GET)
+	public String adminlogout(HttpSession session) {
+		session.removeAttribute("username");
+		return "redirect:../index";
+	}
+	
+	
+	
+	//done
 	@GetMapping("/teacher_login")
 	public ModelAndView teacher_login()
 	{
@@ -64,14 +77,16 @@ public class LoginController {
 	}
 	
 	
+	//done
 	@PostMapping("/teacher/home")
-	public ModelAndView teacher_login(@RequestParam String username, @RequestParam String password)
+	public ModelAndView teacher_login(@RequestParam String username, @RequestParam String password, HttpSession session)
 	{
 		//validate method in dao
 		//call here
 		Teacher teacher = dao.validateTeacher(username, password);
 		if(teacher != null)
 		{
+			session.setAttribute("teacher", teacher);
 			mv.setViewName("teacher/home");
 			return mv;
 		}
@@ -84,7 +99,20 @@ public class LoginController {
 		
 	}
 	
+	//done
+	@RequestMapping(value = "/teacher/teacherlogout", method = RequestMethod.GET)
+	public String teacherlogout(HttpSession session) {
+		session.removeAttribute("teacher");
+		return "redirect:../index";
+	}
 
+	
+	
+	
+	
+	
+	
+	//done
 	@GetMapping("/student_login")
 	public ModelAndView student_login()
 	{
@@ -94,13 +122,14 @@ public class LoginController {
 	
 	
 	@PostMapping("/student/home")
-	public ModelAndView  student_login(@RequestParam String username, @RequestParam String password)
+	public ModelAndView  student_login( HttpSession session, @RequestParam String username, @RequestParam String password)
 	{
 		Student student = dao.validateStudent(username, password);
 		
 		if(student != null)
 		{
-			System.out.println("student login success");
+			session.setAttribute("student", student);
+		//	System.out.println("student login success");
 			mv.setViewName("student/home");	
 			return mv;
 		}
@@ -110,16 +139,14 @@ public class LoginController {
 			mv.setViewName("redirect:/student_login");	
 			return mv;
 		}
-		
 	}
 	
 	
 	
-	@RequestMapping(value = "logout", method = RequestMethod.GET)
-	public String logout(HttpSession session) {
-		//if
-		session.removeAttribute("username");
-		return "redirect:../account";
+	@RequestMapping(value = "/student/studentlogout", method = RequestMethod.GET)
+	public String studentlogout(HttpSession session) {
+		session.removeAttribute("student");
+		return "redirect:../index";
 	}
 
 	

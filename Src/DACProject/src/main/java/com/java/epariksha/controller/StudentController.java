@@ -18,14 +18,32 @@ public class StudentController {
 	StudentDAOImpl dao;
 
 	ModelAndView mv = new ModelAndView(); 
-	
-	
+
+	//--------------------------------------------------------------
+	//	ADMIN CONTROLLERS
+
+	//done
 	@GetMapping("/admin/student")
 	public ModelAndView admin_student() 
 	{
 		List<Student> list = dao.getAll();
 		mv.addObject("students", list); //request.setAttribute
 		mv.setViewName("admin/student");
+		return mv;
+	}
+
+
+
+	//------------------------------------------------------------------
+	//	TEACHER CONTROLLERS
+
+	//done
+	@GetMapping("/teacher/student")
+	public ModelAndView teacher_student() 
+	{
+		List<Student> list = dao.getAll();
+		mv.addObject("students", list); //request.setAttribute
+		mv.setViewName("teacher/student");
 		return mv;
 	}
 }

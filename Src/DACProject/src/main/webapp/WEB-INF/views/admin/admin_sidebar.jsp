@@ -41,6 +41,12 @@
 				<i class="bi bi-box-arrow-in-right"></i><span>Exam History</span>
 			</a>
 		</li>
+		
+		<li class="nav-item">
+			<a class="nav-link collapsed" href="result"> 
+				<i class="bi bi-box-arrow-in-right"></i><span>Result</span>
+			</a>
+		</li>
 		<!-- End Exam History Page Nav -->
 
 	</ul>

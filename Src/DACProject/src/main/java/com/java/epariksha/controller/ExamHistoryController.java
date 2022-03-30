@@ -13,20 +13,39 @@ import com.java.epariksha.entity.Exam;
 @Controller
 public class ExamHistoryController {
 
-	
+
 	@Autowired
 	ExamDAOImpl dao;
-	
+
 	ModelAndView mv = new ModelAndView(); 
-	
+
+
+	//--------------------------------------------------------------
+	//	ADMIN CONTROLLERS
+
+	//done
 	@GetMapping("/admin/exam_history")
-	public ModelAndView examHistory()
+	public ModelAndView admin_examHistory()
 	{
 		List<Exam> list = dao.getAllPreviousExams();
 		mv.addObject("exams_history", list); //request.setAttribute
 		mv.setViewName("admin/exam_history");
 		return mv;
 	}
-	
-	
+
+
+
+	//------------------------------------------------------------------
+	//	TEACHER CONTROLLERS
+
+	//done
+	@GetMapping("/teacher/exam_history")
+	public ModelAndView teacher_examHistory()
+	{
+		List<Exam> list = dao.getAllPreviousExams();
+		mv.addObject("exams_history", list); //request.setAttribute
+		mv.setViewName("teacher/exam_history");
+		return mv;
+	}
+
 }

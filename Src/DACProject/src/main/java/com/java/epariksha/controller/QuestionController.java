@@ -17,8 +17,11 @@ public class QuestionController {
 	QuestionDAOImpl dao;
 
 	ModelAndView mv = new ModelAndView(); 
-	
-	
+
+	//--------------------------------------------------------------
+	//	ADMIN CONTROLLERS
+
+	//done
 	@GetMapping("/admin/question")
 	public ModelAndView admin_question() 
 	{
@@ -27,5 +30,20 @@ public class QuestionController {
 		mv.setViewName("admin/question");
 		return mv;
 	}
-	
+
+
+
+
+	//------------------------------------------------------------------
+	//	TEACHER CONTROLLERS
+
+	//done
+	@GetMapping("/teacher/question")
+	public ModelAndView teacher_question() 
+	{
+		List<Question> list = dao.getAll();
+		mv.addObject("questions", list); //request.setAttribute
+		mv.setViewName("teacher/question");
+		return mv;
+	}
 }

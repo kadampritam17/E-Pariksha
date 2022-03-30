@@ -60,7 +60,7 @@
 									<td scope="col"><%=al.getSubjectName()%></td>
 									<td scope="col"><%=al.getSubjectDescription()%></td>
 									<td scope="col"><a
-										href="subject_update/<%=al.getSubjectId()%>"
+										href="subject_update?id=<%=al.getSubjectId()%>"
 										class="btn btn-primary"><i class="bi-pencil"></i></a> <a
 										href="delete/<%=al.getSubjectId()%>" class="btn btn-danger"><i class="bi-trash"></i></a></td>
 								</tr>

@@ -13,13 +13,16 @@ import com.java.epariksha.entity.Result;
 @Controller
 public class ResultController {
 
-	
+
 	@Autowired
 	ResultDAO dao;
 
 	ModelAndView mv = new ModelAndView(); 
-	
-	
+
+	//--------------------------------------------------------------
+	//	ADMIN CONTROLLERS
+
+	//done
 	@GetMapping("/admin/result")
 	public ModelAndView admin_result() 
 	{
@@ -28,6 +31,24 @@ public class ResultController {
 		mv.setViewName("admin/result");
 		return mv;
 	}
-	
-	
+
+
+
+
+
+
+	//------------------------------------------------------------------
+	//	TEACHER CONTROLLERS
+
+	//done
+	@GetMapping("/teacher/result")
+	public ModelAndView teacher_result() 
+	{
+		List<Result> list = dao.getAll();
+		mv.addObject("results", list); //request.setAttribute
+		mv.setViewName("teacher/result");
+		return mv;
+	}
+
+
 }

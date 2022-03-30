@@ -13,18 +13,21 @@ import com.java.epariksha.entity.Exam;
 @Controller
 public class ExamController {
 
-	
+
 	/*
 	 * @GetMapping("/admin/exam") public String f4() { return "admin/exam"; }
 	 * 
 	 */
-	
+
 	@Autowired
 	ExamDAOImpl dao;
 
 	ModelAndView mv = new ModelAndView(); 
-	
-	
+
+	//--------------------------------------------------------------
+	//	ADMIN CONTROLLERS
+
+	//done
 	@GetMapping("/admin/exam")
 	public ModelAndView admin_exam() 
 	{
@@ -33,5 +36,19 @@ public class ExamController {
 		mv.setViewName("admin/exam");
 		return mv;
 	}
-	
+
+
+
+	//------------------------------------------------------------------
+	//	TEACHER CONTROLLERS
+
+	//done
+	@GetMapping("/teacher/exam")
+	public ModelAndView teacher_exam() 
+	{
+		List<Exam> list = dao.getAll();
+		mv.addObject("exams", list); //request.setAttribute
+		mv.setViewName("teacher/exam");
+		return mv;
+	}
 }
