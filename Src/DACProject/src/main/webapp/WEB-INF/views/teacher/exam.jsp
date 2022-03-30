@@ -1,4 +1,5 @@
-
+<%@page import="java.util.List"%>
+<%@page import="com.java.epariksha.entity.Exam"%>
 <!-- ======= head ======= -->
 <%@ include file="teacher_head.jsp"%>
 <!-- End head -->
@@ -23,16 +24,18 @@
 		</nav>
 	</div>
 	<!-- End Page Title -->
-
+	<%
+	List<Exam> list = (List<Exam>) request.getAttribute("exams");
+	%>
 	<section class="section">
 		<div class="row">
 			<div class="col-lg-12">
 
 				<div class="card">
 					<div class="card-body">
-						<div class="card-title">
-							<a href="exam_add" class="btn btn-primary">Add Exam</a>
-						</div>
+						<!-- <div class="card-title">
+                <a href="add_exam.html" class="btn btn-primary">Add Exam</a>
+              </div> -->
 
 						<!--   <h5 class="card-title">Datatables</h5>
               <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
@@ -42,9 +45,8 @@
 							<thead style="background-color: #37517e; color: white">
 								<tr>
 									<th scope="col">Id</th>
-									<th scope="col">Subject Name</th>
+									<th scope="col">Exam Name</th>
 									<th scope="col">Teacher Name</th>
-									<th scope="col">Name</th>
 									<th scope="col">Date</th>
 									<th scope="col">No Of Questions</th>
 									<th scope="col">Marks</th>
@@ -56,82 +58,27 @@
 								</tr>
 							</thead>
 							<tbody>
+								<%
+								for (Exam al : list) {
+								%>
 								<tr>
-									<td scope="row">1</td>
-									<td scope="col">Subject Name</td>
-									<td scope="col">Teacher Name</td>
-									<td scope="col">Name</td>
-									<td scope="col">Date</td>
-									<td scope="col">No Of Questions</td>
-									<td scope="col">Marks</td>
-									<td scope="col">Actual Time</td>
-									<td scope="col">Login Time</td>
-									<td scope="col">Status</td>
-									<td scope="col">Easy</td>
-									<td scope="col"><a href="update_teacher.html"
-										class="btn btn-primary">Update</a><a href="#"
-										class="btn btn-danger">delete</a></td>
+									<td scope="row"><%=al.getExamId()%></td>
+									<td scope="col"><%=al.getExamName()%></td>
+									<td scope="col"><%=al.getExamName()%>Teacher Name</td>
+									<td scope="col"><%=al.getExamDate()%></td>
+									<td scope="col"><%=al.getNoOfQuestion()%></td>
+									<td scope="col"><%=al.getMarks()%></td>
+									<td scope="col"><%=al.getActualTime()%></td>
+									<td scope="col"><%=al.getLoginTime()%></td>
+									<td scope="col"><%=al.getExamStatus()%></td>
+									<td scope="col"><%=al.getExamLevel()%></td>
+									<td scope="col"><a href="exam_update"
+										class="btn btn-primary"><i class="bi-pencil"></i></a><a href="#"
+										class="btn btn-danger"><i class="bi-trash"></i></a></td>
 								</tr>
-								<tr>
-									<td scope="row">2</td>
-									<td scope="col">Subject Name</td>
-									<td scope="col">Teacher Name</td>
-									<td scope="col">Name</td>
-									<td scope="col">Date</td>
-									<td scope="col">No Of Questions</td>
-									<td scope="col">Marks</td>
-									<td scope="col">Actual Time</td>
-									<td scope="col">Login Time</td>
-									<td scope="col">Status</td>
-									<td scope="col">Hard</td>
-									<td scope="col"><a href="update_teacher.html"
-										class="btn btn-primary">Update</a><a href="#"
-										class="btn btn-danger">delete</a></td>
-								</tr>
-								<tr>
-									<td scope="row">3</td>
-									<td scope="col">Subject Name</td>
-									<td scope="col">Teacher Name</td>
-									<td scope="col">Name</td>
-									<td scope="col">Date</td>
-									<td scope="col">No Of Questions</td>
-									<td scope="col">Marks</td>
-									<td scope="col">Actual Time</td>
-									<td scope="col">Login Time</td>
-									<td scope="col">Status</td>
-									<td scope="col">Medium</td>
-									<td scope="col"><a href="update_teacher.html"
-										class="btn btn-primary">Update</a><a href="#"
-										class="btn btn-danger">delete</a></td>
-								</tr>
-								<tr>
-									<td scope="row">4</td>
-									<td scope="col">Subject Name</td>
-									<td scope="col">Teacher Name</td>
-									<td scope="col">Name</td>
-									<td scope="col">Date</td>
-									<td scope="col">No Of Questions</td>
-									<td scope="col">Marks</td>
-									<td scope="col">Actual Time</td>
-									<td scope="col">Login Time</td>
-									<td scope="col">Status</td>
-									<td scope="col">Level</td>
-									<td scope="col">Action</td>
-								</tr>
-								<tr>
-									<td scope="row">5</td>
-									<td scope="col">Subject Name</td>
-									<td scope="col">Teacher Name</td>
-									<td scope="col">Name</td>
-									<td scope="col">Date</td>
-									<td scope="col">No Of Questions</td>
-									<td scope="col">Marks</td>
-									<td scope="col">Actual Time</td>
-									<td scope="col">Login Time</td>
-									<td scope="col">Status</td>
-									<td scope="col">Level</td>
-									<td scope="col">Action</td>
-								</tr>
+								<%
+								}
+								%>
 							</tbody>
 						</table>
 						<!-- End Table with stripped rows -->
