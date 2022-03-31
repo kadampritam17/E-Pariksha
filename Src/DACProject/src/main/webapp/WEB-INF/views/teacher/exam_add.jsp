@@ -36,8 +36,8 @@
 
 <%
 Exam exam =  (Exam)request.getAttribute("exam");
-Teacher teacher =(Teacher)session.getAttribute("teacher");
-System.out.println(teacher);
+Teacher t = (Teacher)request.getAttribute("teach");
+
 Subject subject =  (Subject)request.getAttribute("subject");
 List<Subject> list = (List<Subject>) request.getAttribute("subjects");
 List<Teacher> list2 = (List<Teacher>) request.getAttribute("teachers");
@@ -71,20 +71,9 @@ List<Teacher> list2 = (List<Teacher>) request.getAttribute("teachers");
 								</select>
 							</div>
 
-							<div class="col-md-6">
-								<label for="validationDefault01" class="form-label">Teacher
-									Name</label> <select class="form-select" id="floatingSelect" name="subjectId">
-									<option selected>Select</option>
-									 <%
-								for (Teacher al : list2) {
-								%>
-									<option value="<%=al.getTeacherId()%>"><%=al.getFirstName()+' '+ al.getLastName()%></option>
-									
-									<%
-								}
-								%>
-								</select>
-							</div>
+							<input type="hidden" class="form-control" value =<%= t.getTeacherId() %> name="teacherId"
+									 >
+							
 
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Exam
@@ -95,7 +84,7 @@ List<Teacher> list2 = (List<Teacher>) request.getAttribute("teachers");
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Import
 									File</label> <input type="file" class="form-control" name="import_file"
-									placeholder="<%=session.getAttribute("teacher")%> ">
+									placeholder="Upload CSV file">
 							</div>
 
 							<div class="col-md-6">

@@ -2,6 +2,9 @@ package com.java.epariksha.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -58,10 +61,14 @@ public class ExamController {
 	//	TEACHER CONTROLLERS
 
 	@GetMapping("/teacher/exam_add")
-	public ModelAndView admin_exam_add() 
+	public ModelAndView teacher_exam_add(HttpServletRequest request) 
 	{
+		HttpSession session = request.getSession();
+		Teacher teacher = (Teacher)session.getAttribute("teacher");
+
 		List<Subject> list = subDAO.getAll();
 		List<Teacher> list2 = TeacherDAO.getAll();
+		mv.addObject("teach", teacher);//request.setAttribute (session data)
 		mv.addObject("subjects", list); //request.setAttribute
 		mv.addObject("teachers", list2); //request.setAttribute		
 		mv.setViewName("teacher/exam_add");
