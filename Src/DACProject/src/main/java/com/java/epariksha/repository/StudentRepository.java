@@ -13,6 +13,13 @@ import com.java.epariksha.entity.Student;
 public interface StudentRepository extends JpaRepository<Student, Integer>
 {
 	//Query using Hibernate Query Language
-	 @Query(value="select * from student_info_tbl a where a.student_email_id =:username and a.student_password=:password",nativeQuery=true)
-	 public List<Student> findStudentByUsernameAndPassword(@PathVariable("username") String username,@PathVariable("password") String password);
+	@Query(value="select * from student_info_tbl a where a.student_email_id =:username and a.student_password=:password",nativeQuery=true)
+	public List<Student> findStudentByUsernameAndPassword(@PathVariable("username") String username,@PathVariable("password") String password);
+
+
+	//count of students
+	@Query(value="select count(*) from student_info_tbl",nativeQuery=true)
+	public Integer getStudentCount();
+
+
 }

@@ -25,7 +25,10 @@
 		</nav>
 	</div>
 	<!-- End Page Title -->
-
+	<%
+	
+		Integer studCount = (Integer) request.getAttribute("studCount");
+	%>
 	<section class="section">
 		<div class="row">
 			<div class="col-lg-12">
@@ -51,7 +54,7 @@
 											<div class="card-body" style="align-items: center;">
 												<h5 class="card-title" style="text-align: center;">Total
 													Number of Students</h5>
-												<h5 class="card-text" style="text-align: center;">100</h5>
+												<h5 class="card-text" style="text-align: center;"><%= studCount %></h5>
 											</div>
 
 										</div>

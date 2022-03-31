@@ -1,5 +1,6 @@
 package com.java.epariksha.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,9 +46,9 @@ public class LoginController {
 	{
 		if(username.equalsIgnoreCase("admin@gmail.com") && password.equals("admin"))
 		{
-			
 			System.out.println("adminlogin success");
 			session.setAttribute("username", username);
+//			System.out.println(session.get);;
 			mv.setViewName("admin/home");
 			return mv;
 		}
@@ -79,14 +80,15 @@ public class LoginController {
 	
 	//done
 	@PostMapping("/teacher/home")
-	public ModelAndView teacher_login(@RequestParam String username, @RequestParam String password, HttpSession session)
+	public ModelAndView teacher_login(@RequestParam String username, @RequestParam String password, HttpServletRequest request)
 	{
 		//validate method in dao
 		//call here
 		Teacher teacher = dao.validateTeacher(username, password);
 		if(teacher != null)
 		{
-			session.setAttribute("teacher", teacher);
+			request.getSession().setAttribute("teacher",teacher);
+//			session.setAttribute("teacher", teacher);
 			mv.setViewName("teacher/home");
 			return mv;
 		}

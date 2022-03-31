@@ -1,38 +1,67 @@
 package com.java.epariksha.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.java.epariksha.dao.DashboardDAO;
 
 @Controller
 public class MainController {
+
+
+	@Autowired
+	DashboardDAO dao;
+
+	ModelAndView mv = new ModelAndView();
+
+
 
 	@GetMapping("/index")
 	public String f1()
 	{
 		return "index";
 	}
-	
-	
-	
+
+
+	//--------------------------------------------------------------
+	//	ADMIN CONTROLLERS
+
+
 	@GetMapping("/admin/home")
-	public String f4()
+	public ModelAndView admin_StudentCount()
 	{
-		return "admin/home";
+		int studCount = dao.studentCount();
+
+		mv.addObject("studCount",studCount);
+		mv.setViewName("admin/home");
+		return mv;
 	}
-	
-	
+
+	//--------------------------------------------------------------
+	//	STUDENT CONTROLLERS
+
 	@GetMapping("/student/home")
 	public String f2()
 	{
 		return "student/home";
 	}
-	
-	
-	
+
+
+	//------------------------------------------------------------------
+	//	TEACHER CONTROLLERS
+
+
 	@GetMapping("/teacher/home")
-	public String f3()
+	public ModelAndView teacher_StudentCount()
 	{
-		return "teacher/home";
+		System.out.println("ncjdncd");
+		int studCount = dao.studentCount();
+
+		mv.addObject("studCount",studCount);
+		mv.setViewName("teacher/home");
+		return mv;
 	}
-	
+
 }

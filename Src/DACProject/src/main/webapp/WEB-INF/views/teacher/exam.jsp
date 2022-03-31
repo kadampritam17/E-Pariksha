@@ -19,7 +19,7 @@
 		<nav>
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="teacher/home">Home</a></li>
-				<li class="breadcrumb-item active"><a href="exam">Exam</a></li>
+				<li class="breadcrumb-item active"><a href="exam">Exam<%=session.getAttribute("teacher.prop")%></a></li>
 			</ol>
 		</nav>
 	</div>

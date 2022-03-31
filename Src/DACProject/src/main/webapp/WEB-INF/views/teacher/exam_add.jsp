@@ -1,5 +1,10 @@
+
+
 <%@page import="java.util.List"%>
 <%@page import="com.java.epariksha.entity.Exam"%>
+<%@page import="com.java.epariksha.entity.Subject"%>
+<%@page import="com.java.epariksha.entity.Teacher"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!-- ======= head ======= -->
 <%@ include file="teacher_head.jsp"%>
 <!-- End head -->
@@ -24,14 +29,21 @@
 		</nav>
 	</div>
 	<!-- End Page Title -->
+<%
+Exam exam =  (Exam)request.getAttribute("exam");
+Teacher teacher =(Teacher)session.getAttribute("teacher");
+System.out.println(teacher);
 
+Subject subject =  (Subject)request.getAttribute("subject");
+	%>
+	
 	<section class="section">
 		<div class="row">
 			<div class="col-lg-12">
 
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">Add Exam</h5>
+						<h5 class="card-title">Add Exam<%=session.getAttribute("teacher")%></h5>
 						<!--   <p>Browser default validation with using the <code>required</code> keyword. Try submitting the form below. Depending on your browser and OS, you’ll see a slightly different style of feedback.</p>
    -->
 						<!-- Browser Default Validation -->

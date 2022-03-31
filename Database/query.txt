@@ -1,1 +1,2 @@
 insert into teacher_info_tbl values(default, "1989-01-11", "ram@gmail.com", 15, "Ram", "Sharma", 9988774411, "ram", 15,"ram123");
+

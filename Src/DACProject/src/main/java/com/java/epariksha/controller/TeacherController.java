@@ -34,4 +34,15 @@ public class TeacherController {
 	
 	
 	
+	
+	
+	
+	@GetMapping("/teacher/teacher_profile")
+	public ModelAndView teacher_profile() 
+	{
+		mv.setViewName("teacher/teacher_profile");
+		return mv;
+	}
+	
+	
 }
