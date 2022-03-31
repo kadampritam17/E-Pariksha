@@ -16,7 +16,6 @@ public class ExamController {
 
 	/*
 	 * @GetMapping("/admin/exam") public String f4() { return "admin/exam"; }
-	 * 
 	 */
 
 	@Autowired
