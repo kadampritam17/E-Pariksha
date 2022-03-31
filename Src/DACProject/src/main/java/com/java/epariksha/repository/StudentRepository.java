@@ -21,5 +21,6 @@ public interface StudentRepository extends JpaRepository<Student, Integer>
 	@Query(value="select count(*) from student_info_tbl",nativeQuery=true)
 	public Integer getStudentCount();
 
+	
 
 }

@@ -27,17 +27,28 @@ public class MainController {
 
 	//--------------------------------------------------------------
 	//	ADMIN CONTROLLERS
-
+	//DOne
 
 	@GetMapping("/admin/home")
 	public ModelAndView admin_StudentCount()
 	{
 		int studCount = dao.studentCount();
-
 		mv.addObject("studCount",studCount);
+		
+		int subCount = dao.subjectCount();
+		mv.addObject("subCount",subCount);
+		
+		int examCount = dao.examCount();		
+		mv.addObject("examCount",examCount);
+		
+		int teacherCount = dao.teacherCount();		
+		mv.addObject("teacherCount",teacherCount);
+		
 		mv.setViewName("admin/home");
 		return mv;
 	}
+
+	
 
 	//--------------------------------------------------------------
 	//	STUDENT CONTROLLERS
@@ -51,17 +62,24 @@ public class MainController {
 
 	//------------------------------------------------------------------
 	//	TEACHER CONTROLLERS
-
+	//DOne
 
 	@GetMapping("/teacher/home")
 	public ModelAndView teacher_StudentCount()
 	{
-		System.out.println("ncjdncd");
 		int studCount = dao.studentCount();
-
+		int subCount = dao.subjectCount();
+		
 		mv.addObject("studCount",studCount);
+		mv.addObject("subCount",subCount);
+		
+		int examCount = dao.examCount();
+		
+		mv.addObject("examCount",examCount);
 		mv.setViewName("teacher/home");
 		return mv;
 	}
+	
+	
 
 }

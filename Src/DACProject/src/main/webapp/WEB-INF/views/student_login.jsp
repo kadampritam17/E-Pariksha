@@ -58,7 +58,7 @@
 											<input type="checkbox" checked>
 											<span class="checkmark"></span>
 										</label> -->
-										<p class="text-left"><a href="/UI/E-Pariksha-UI/login/SignUp.html">Sign Up</a></p>
+										<p class="text-left"><a href="student_signup">Sign Up</a></p>
 									</div>
 									<div class="w-50 text-md-right">
 										<a href="#">Forgot Password</a>

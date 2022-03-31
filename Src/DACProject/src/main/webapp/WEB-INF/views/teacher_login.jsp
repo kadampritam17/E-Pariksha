@@ -41,7 +41,7 @@
 							</div>
 							<form action="teacher/home" method="post" >
 								<div class="form-group mb-3">
-									<label class="label" for="name">Username</label>
+									<label class="label" for="name">Email</label>
 									<input type="text" class="form-control" placeholder="Username" name="username" required>
 								</div>
 								<div class="form-group mb-3">
@@ -50,7 +50,8 @@
 								</div>
 								<div class="form-group">
 									<button type="submit"
-										class="form-control btn btn-primary rounded submit px-3">Login</button>
+										class="form-control btn btn-primary rounded submit px-3"
+										href="teacher/home">Login</button>
 								</div>
 								<div class="form-group d-md-flex">
 									<div class="w-50 text-left">

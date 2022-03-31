@@ -26,8 +26,10 @@
 	</div>
 	<!-- End Page Title -->
 	<%
-	
 		Integer studCount = (Integer) request.getAttribute("studCount");
+		Integer subCount = (Integer) request.getAttribute("subCount");
+		Integer examCount = (Integer) request.getAttribute("examCount");
+		
 	%>
 	<section class="section">
 		<div class="row">
@@ -47,7 +49,7 @@
 										<div class="card"
 											style="width: 20%; float: left; padding: 15px; margin-left: 15%; margin-right: 5%;">
 
-											<img src="assets/img/kindpng_343936.png"
+											<img src="/home_assets/img/img1.png"
 												class="mx-auto d-block" height="30%" width="30%"
 												style="text-align: center;">
 
@@ -68,13 +70,13 @@
 										<div class="card"
 											style="width: 20%; float: left; padding: 15px; margin-right: 5%;">
 											<img
-												src="assets/img/kisspng-apple-books-macos-computer-icons-os-x-mavericks-ma-5cc059c70ecfa4.5202859715561097670607.png"
+												src="/home_assets/img/img3.png"
 												class="mx-auto d-block" height="30%" width="30%"
 												style="text-align: center;">
 											<div class="card-body" style="align-items: center;">
 												<h5 class="card-title" style="text-align: center;">Total
 													Number of Subjects</h5>
-												<h5 class="card-text" style="text-align: center;">10</h5>
+												<h5 class="card-text" style="text-align: center;"><%= subCount %></h5>
 											</div>
 										</div>
 										<!-- End Card with an image on top -->
@@ -85,13 +87,13 @@
 										<!-- Card with an image on top -->
 										<div class="card"
 											style="width: 20%; float: left; padding: 15px;">
-											<img src="assets/img/kindpng_2423250.png"
+											<img src="/home_assets/img/img2.png"
 												class="mx-auto d-block" height="25%" width="30%"
 												style="text-align: center;">
 											<div class="card-body" style="align-items: center;">
 												<h5 class="card-title" style="text-align: center;">Total
 													Number of Exam</h5>
-												<h5 class="card-text" style="text-align: center;">5</h5>
+												<h5 class="card-text" style="text-align: center;"><%= examCount %></h5>
 											</div>
 										</div>
 										<!-- End Card with an image on top -->

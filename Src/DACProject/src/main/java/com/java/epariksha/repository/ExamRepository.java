@@ -20,5 +20,10 @@ public interface ExamRepository extends JpaRepository<Exam, Integer> {
 	//Query using Hibernate Query Language
 	@Query(value="select * from exam_info_tbl a where a.exam_status = 'deactive'",nativeQuery=true)
 	List<Exam> findAllPreviousExams();
+	
+	
+	//count of exams
+			@Query(value="select count(*) from exam_info_tbl",nativeQuery=true)
+			public Integer getExamCount();
 
 }

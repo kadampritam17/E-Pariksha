@@ -60,7 +60,7 @@ public class Teacher {
 
 	
 	@Column(name = "teacher_qualification")  //int
-	private int qualification;
+	private String qualification;
 
 	
 	@Column(name = "teacher_experience")  //int
@@ -73,7 +73,7 @@ public class Teacher {
 
 
 	public Teacher(int teacherId, List<Exam> exam, String firstName, String lastName, double mobileNo, Date dob,
-			String userName, String password, String emailId, int qualification, int experience) {
+			String userName, String password, String emailId, String qualification, int experience) {
 		super();
 		this.teacherId = teacherId;
 		this.exam = exam;
@@ -179,12 +179,12 @@ public class Teacher {
 	}
 
 
-	public int getQualification() {
+	public String getQualification() {
 		return qualification;
 	}
 
 
-	public void setQualification(int qualification) {
+	public void setQualification(String qualification) {
 		this.qualification = qualification;
 	}
 

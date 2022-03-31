@@ -17,13 +17,13 @@
 				data-bs-toggle="dropdown"> <img
 					src="../home_assets/img/profile-img.jpg" alt="Profile"
 					class="rounded-circle"> <span
-					class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+					class="d-none d-md-block dropdown-toggle ps-2">Teacher</span>
 			</a> <!-- End Profile Iamge Icon -->
 
 				<ul
 					class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
 					<li class="dropdown-header">
-						<h6>XYZ</h6> <span>Web Designer</span>
+						<h6>Prachi Godbole </h6> <span>Teacher</span>
 					</li>
 					<li>
 						<hr class="dropdown-divider">
