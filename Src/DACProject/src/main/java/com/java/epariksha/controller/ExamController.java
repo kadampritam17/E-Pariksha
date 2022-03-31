@@ -67,10 +67,9 @@ public class ExamController {
 		Teacher teacher = (Teacher)session.getAttribute("teacher");
 
 		List<Subject> list = subDAO.getAll();
-		List<Teacher> list2 = TeacherDAO.getAll();
+	
 		mv.addObject("teach", teacher);//request.setAttribute (session data)
 		mv.addObject("subjects", list); //request.setAttribute
-		mv.addObject("teachers", list2); //request.setAttribute		
 		mv.setViewName("teacher/exam_add");
 		return mv;
 	}

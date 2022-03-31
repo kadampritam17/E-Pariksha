@@ -38,9 +38,7 @@
 Exam exam =  (Exam)request.getAttribute("exam");
 Teacher t = (Teacher)request.getAttribute("teach");
 
-Subject subject =  (Subject)request.getAttribute("subject");
 List<Subject> list = (List<Subject>) request.getAttribute("subjects");
-List<Teacher> list2 = (List<Teacher>) request.getAttribute("teachers");
 %>
 	
 	
@@ -58,7 +56,7 @@ List<Teacher> list2 = (List<Teacher>) request.getAttribute("teachers");
 
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Subject</label>
-								<select class="form-select" id="floatingSelect">
+								<select class="form-select" id="floatingSelect" name = "subjectId">
 									<option selected>Select</option>
 										 <%
 								for (Subject al : list) {

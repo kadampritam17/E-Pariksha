@@ -31,7 +31,6 @@ public class Exam {
 	private List<ExamQuestionMap> examQuestion;
 	
 	
-	
 	@Column(name = "exam_name")  //varchar
 	private String examName;
 	
