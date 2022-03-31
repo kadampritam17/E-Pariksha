@@ -7,4 +7,6 @@ import com.java.epariksha.entity.Exam;
 public interface ExamDAO {
 
 	public List<Exam> getAll();
+
+
 }

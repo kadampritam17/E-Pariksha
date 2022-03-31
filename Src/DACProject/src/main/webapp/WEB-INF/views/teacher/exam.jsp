@@ -19,7 +19,7 @@
 		<nav>
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="teacher/home">Home</a></li>
-				<li class="breadcrumb-item active"><a href="exam">Exam<%=session.getAttribute("teacher.prop")%></a></li>
+				<li class="breadcrumb-item active"><a href="exam">Exam</a></li>
 			</ol>
 		</nav>
 	</div>
@@ -33,10 +33,9 @@
 
 				<div class="card">
 					<div class="card-body">
-						<!-- <div class="card-title">
-                <a href="add_exam.html" class="btn btn-primary">Add Exam</a>
-              </div> -->
-
+			 <div class="card-title">
+                <a href="exam_add" class="btn btn-primary">Add Exam</a>
+              </div> 
 						<!--   <h5 class="card-title">Datatables</h5>
               <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
  -->

@@ -12,11 +12,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "exam_info_tbl")
 public class Exam {
-	
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -32,7 +35,8 @@ public class Exam {
 	@Column(name = "exam_name")  //varchar
 	private String examName;
 	
-	
+//	@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "exam_date")  //date
 	private Date examDate;
 	

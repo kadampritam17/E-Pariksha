@@ -1,6 +1,7 @@
 package com.java.epariksha.dao;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class TeacherDAOImpl implements TeacherDAO {
 	
 	//done
 	@Override
-	public Collection getAll() {
+	public List<Teacher> getAll() {
 		return teacherRepository.findAll();
 	}
 

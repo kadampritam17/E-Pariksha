@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.java.epariksha.entity.Exam;
+import com.java.epariksha.entity.Subject;
 import com.java.epariksha.repository.ExamRepository;
 
 @Service
@@ -24,4 +25,10 @@ public class ExamDAOImpl implements ExamDAO {
 		return examRepository.findAllPreviousExams();
 	}
 
+	
+	public Exam save(Exam exam) {
+		return examRepository.save(exam);
+	}
+	
+	
 }
