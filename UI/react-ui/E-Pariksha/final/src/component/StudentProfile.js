@@ -1,26 +1,88 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router'
 export default function StudentProfile() {
+  let navigate=useNavigate();
+  function dashboard()
+  {
+    navigate('/dashboard');
+  }
+  function examHistory()
+  {
+    navigate('/examhistory')
+  }
+  function examDash()
+  {
+    navigate('/examdash')
+  }
+  function profile()
+  {
+    navigate('/profile')
+  }
   return (
     <div>
         <body>
+        {/* <!-- ======= Header ======= --> */}
+  <header id="header" class="header fixed-top d-flex align-items-center">
 
-{/* <!-- ======= Header ======= --> */}
-<header id="header" class="header fixed-top d-flex align-items-center">
-
-  <div class="d-flex align-items-center justify-content-between">
-    <i class="bi bi-list toggle-sidebar-btn"></i>
-    <a href="index.html" class="logo d-flex align-items-center">
-      <img src="assets/img/EPariksha.png" alt=""/>
-      <span class="d-none d-lg-block">E-Pariksha</span>
-    </a>
-    
-  </div>
-  {/* <!-- End Logo --> */}
+    <div class="d-flex align-items-center justify-content-between">
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/EPariksha.png" alt=""/>
+        <span class="d-none d-lg-block">E-Pariksha</span>
+      </a>
+      
+    </div>
+    {/* <!-- End Logo --> */}
 
 
-</header>
-{/* <!-- End Header --> */}
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile.jfif" alt="Profile" class="rounded-circle"/>
+            <span class="d-none d-md-block dropdown-toggle ps-2">Student</span>
+          </a>
+          {/* <!-- End Profile Image Icon --> */}
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>XYZ</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider"/>
+            </li>
+
+            <li>
+              <button class="dropdown-item d-flex align-items-center" style={{'border':'none'}} onClick={profile}>
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </button>
+            </li>
+            <li>
+              <hr class="dropdown-divider"/>
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul>
+          {/* <!-- End Profile Dropdown Items --> */}
+        </li>
+        {/* <!-- End Profile Nav --> */}
+
+      </ul>
+    </nav>
+  {/* <!-- End Icons Navigation --> */}
+
+  </header>
+  {/* <!-- End Header --> */}
+
 
 
 {/* <!-- ======= Sidebar ======= --> */}
@@ -29,67 +91,33 @@ export default function StudentProfile() {
   <ul class="sidebar-nav" id="sidebar-nav">
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="index.html">
+      <button class="nav-link collapsed" style={{'border':'none'}} onClick={dashboard}>
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
-      </a>
+      </button>
     </li>
     {/* <!-- End Dashboard Nav --> */}
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="student.html">
-        <i class="bi bi-person"></i>
-        <span>Student</span>
-      </a>
-    </li>
-    {/* <!-- End Student Page Nav --> */}
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="teacher.html">
-        <i class="bi bi-question-circle"></i>
-        <span>Teacher</span>
-      </a>
-    </li>
-{/* <!-- End Teacher Page Nav --> */}
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="subject.html">
-        <i class="bi bi-envelope"></i>
-        <span>Subject</span>
-      </a>
-    </li>
-    {/* <!-- End Subject Page Nav --> */}
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="exam.html">
+      <button class="nav-link collapsed" style={{'border':'none'}} onClick={examDash}>
         <i class="bi bi-card-list"></i>
         <span>Exam</span>
-      </a>
+      </button>
     </li>
-    {/* <!-- End Exam Page Nav --> */}
+    {/* End Exam Page Nav */}
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="question.html">
-        <i class="bi bi-box-arrow-in-right"></i>
-        <span>Question</span>
-      </a>
-    </li>
-    {/* <!-- End Question Page Nav --> */}
-
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="examhistory.html">
+      <button class="nav-link collapsed" style={{'border':'none'}} onClick={examHistory}>
         <i class="bi bi-box-arrow-in-right"></i>
         <span>Exam History</span>
-      </a>
+      </button>
     </li>
-    {/* <!-- End Exam History Page Nav --> */}
-  
-
+    {/* End Exam History Page Nav */}
   </ul>
 
 </aside>
-{/* <!-- End Sidebar--> */}
+{/* End Sidebar */}
+
 
 <main id="main" class="main">
 
@@ -97,8 +125,8 @@ export default function StudentProfile() {
       <h1>Profile</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active"><a href="user-profile.html">Profile</a></li>
+          <li class="breadcrumb-item"><button style={{'border':'none'}} onClick={dashboard}>Home</button></li>
+          <li class="breadcrumb-item active"><button style={{'border':'none'}} onClick={profile}>Profile</button></li>
         </ol>
       </nav>
     </div>
