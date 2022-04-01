@@ -26,12 +26,6 @@ import com.java.epariksha.entity.Teacher;
 //@RequestMapping("/admin")
 public class ExamController {
 
-
-	/*
-	 * @GetMapping("/admin/exam") public String f4() { return "admin/exam"; }
-	 * 
-	 */
-
 	@Autowired
 	ExamDAOImpl dao;
 
@@ -60,6 +54,8 @@ public class ExamController {
 	//------------------------------------------------------------------
 	//	TEACHER CONTROLLERS
 
+	
+	//working
 	@GetMapping("/teacher/exam_add")
 	public ModelAndView teacher_exam_add(HttpServletRequest request) 
 	{

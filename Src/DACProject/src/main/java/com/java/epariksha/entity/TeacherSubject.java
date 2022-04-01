@@ -15,7 +15,7 @@ public class TeacherSubject implements Serializable
 	
 	@Id
 	@ManyToOne(cascade=CascadeType.ALL)
-	private Teacher techer;
+	private Teacher teacher;
 	
 
 	@Id
@@ -32,18 +32,18 @@ public class TeacherSubject implements Serializable
 
 	public TeacherSubject(Teacher techer, Subject subject) {
 		super();
-		this.techer = techer;
+		this.teacher = techer;
 		this.subject = subject;
 	}
 
 
 	public Teacher getTecher() {
-		return techer;
+		return teacher;
 	}
 
 
 	public void setTecher(Teacher techer) {
-		this.techer = techer;
+		this.teacher = techer;
 	}
 
 
@@ -64,7 +64,7 @@ public class TeacherSubject implements Serializable
 
 	@Override
 	public String toString() {
-		return "techer=" + techer + ", subject=" + subject ;
+		return "teacher=" + teacher + ", subject=" + subject ;
 	}
 
 	

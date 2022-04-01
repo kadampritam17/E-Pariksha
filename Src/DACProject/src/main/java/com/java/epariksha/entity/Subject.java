@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -25,8 +24,7 @@ public class Subject {
 	@Column(name="subject_id",unique=true,nullable=false) //primary key int
 	private int subjectId;
 	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="subject_id",nullable=false)
+	@OneToMany(cascade=CascadeType.ALL, mappedBy = "subject")
 	private List<Exam> exam;
 	
 	
@@ -34,16 +32,16 @@ public class Subject {
 	private List<Question> question;
 	
 	
+	@OneToMany(mappedBy="subject")
+	private List<TeacherSubject> teacherSubject;
+	
 	@JsonCreator(mode = JsonCreator.Mode.DELEGATING)
 	private Subject (@JsonProperty("subjectId") Integer subject ) {
 	    this.subjectId = subject;
 	}
 	
 	
-//	@OneToMany(cascade=CascadeType.ALL)
-//	@JoinColumn(name="subject_id",nullable=false)
-//	private List<TeacherSubject> teacherSubject;
-	
+
 	
 	@Column(name = "subject_name")  //varchar
 	private String subjectName;

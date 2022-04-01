@@ -19,4 +19,10 @@ public class StudentDAOImpl implements StudentDAO {
 		return studentRepository.findAll();
 	}
 
+	public Student getDetails(int studentId) {
+		return studentRepository.findById(studentId).get();
+	}
+
+	
+
 }

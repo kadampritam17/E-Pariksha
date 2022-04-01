@@ -23,7 +23,7 @@ public class StudentSignupController {
 	}
 
 	@PostMapping(path="/signup")
-	public String  register(@RequestParam String firstName, @RequestParam String lastName, @RequestParam double mobNo, @RequestParam Date Dob, @RequestParam String userName, @RequestParam String password, @RequestParam String emailId)
+	public String  register(@RequestParam String firstName, @RequestParam String lastName, @RequestParam long mobNo, @RequestParam Date Dob, @RequestParam String userName, @RequestParam String password, @RequestParam String emailId)
 	{
 		dao.register(firstName, lastName, mobNo, Dob, userName, password, emailId);
 		return "student_login";

@@ -18,7 +18,7 @@ public class StudentSignupDAO {
 	
 	
 
-	public void register(String firstName, String lastName, double mobNo, Date dob, String userName, String password,
+	public void register(String firstName, String lastName, long mobNo, Date dob, String userName, String password,
 			String emailId) {
 		
 		Student stud = new Student(firstName, lastName, mobNo, dob, userName, password, emailId);

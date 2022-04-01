@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -23,14 +22,13 @@ public class Teacher {
 	@Column(name="teacher_id",unique=true,nullable=false) //primary key int
 	private int teacherId;  
 
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="teacher_id",nullable=false)
-	public List<Exam> exam;
+
+	@OneToMany(cascade=CascadeType.ALL, mappedBy = "teacher")
+	private List<Exam> exam;
 	
-//	@OneToMany(cascade=CascadeType.ALL)
-//	@JoinColumn(name="teacher_id",nullable=false)
-//	public List<TeacherSubject> teacherSubject;
 	
+	
+
 	@Column(name = "teacher_firstname") //varchar
 	private String firstName;
 
@@ -40,7 +38,7 @@ public class Teacher {
 
 	
 	@Column(name = "teacher_mobile") //UK //varchar
-	private double mobileNo; 
+	private long mobileNo; 
 
 	
 	@Column(name = "teacher_dob")   //Date
@@ -66,13 +64,13 @@ public class Teacher {
 	@Column(name = "teacher_experience")  //int
 	private int experience;
 
-
+	
 	public Teacher() {
 		super();
 	}
 
 
-	public Teacher(int teacherId, List<Exam> exam, String firstName, String lastName, double mobileNo, Date dob,
+	public Teacher(int teacherId, List<Exam> exam, String firstName, String lastName, long mobileNo, Date dob,
 			String userName, String password, String emailId, String qualification, int experience) {
 		super();
 		this.teacherId = teacherId;
@@ -129,12 +127,12 @@ public class Teacher {
 	}
 
 
-	public double getMobileNo() {
+	public long getMobileNo() {
 		return mobileNo;
 	}
 
 
-	public void setMobileNo(double mobileNo) {
+	public void setMobileNo(long mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 

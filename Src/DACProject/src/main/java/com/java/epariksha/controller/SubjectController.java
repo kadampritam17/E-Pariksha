@@ -27,7 +27,7 @@ public class SubjectController {
 	
 	ModelAndView mv = new ModelAndView(); 
 
-
+	//done
 	@GetMapping("/subject")
 	public ModelAndView admin_subject() 
 	{

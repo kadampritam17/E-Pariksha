@@ -1,26 +1,33 @@
-package com.epariksha.entity;
+package com.java.epariksha.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "result_info_tbl")
 public class Result {
 	
-	@Column(name = "result_id")   //PK int
+
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="result_id",unique=true,nullable=false) //primary key int
 	private int resultId;
 	
-	@Column(name = "student_id") //FK int
-	@OneToMany
-	private int studentId;
 	
-	@Column(name = "exam_id") //FK int
-	@OneToMany
-	private int examId;
+	@ManyToOne
+	@JoinColumn(name="student_id")
+	private Student student;
+	
+
+	@ManyToOne
+	@JoinColumn(name="exam_id")
+	private Exam exam;
 	
 	@Column(name = "marks") //int
 	private int marks;
@@ -30,6 +37,62 @@ public class Result {
 		super();
 	}
 
+
+	public Result(int resultId, int marks) {
+		super();
+		this.resultId = resultId;
+		this.marks = marks;
+	}
+
+
+	public int getResultId() {
+		return resultId;
+	}
+
+
+	public void setResultId(int resultId) {
+		this.resultId = resultId;
+	}
+
+
+	public int getMarks() {
+		return marks;
+	}
+
+
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+
+	
+	
+
+	public Student getStudent() {
+		return student;
+	}
+
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+
+	public Exam getExam() {
+		return exam;
+	}
+
+
+	public void setExam(Exam exam) {
+		this.exam = exam;
+	}
+
+
+	@Override
+	public String toString() {
+		return "resultId=" + resultId + ", marks=" + marks ;
+	}
+
+	
 	
 
 }
