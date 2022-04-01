@@ -35,7 +35,7 @@ public class Student {
 	
 	
 	@Column(name = "student_mobile") //varchar   UK
-	private double mobileNo;
+	private long mobileNo;
 	
 	
 	@Column(name = "student_dob")	//Date  
@@ -75,7 +75,7 @@ public class Student {
 	}
 
 
-	public Student(int studentId, List<Result> result, String firstName, String lastName, double mobileNo, Date dob,
+	public Student(int studentId, List<Result> result, String firstName, String lastName, long mobileNo, Date dob,
 			String userName, String password, String emailId, double sscPercentage, double hscPercentage,
 			double degreePercentage, boolean isActive) {
 		super();
@@ -96,7 +96,7 @@ public class Student {
 
 
 
-	public Student(String firstName, String lastName, double mobileNo, Date dob, String userName, String password,
+	public Student(String firstName, String lastName, long mobileNo, Date dob, String userName, String password,
 			String emailId) {
 		super();
 		this.firstName = firstName;
@@ -150,12 +150,12 @@ public class Student {
 	}
 
 
-	public double getMobileNo() {
+	public long getMobileNo() {
 		return mobileNo;
 	}
 
 
-	public void setMobileNo(double mobileNo) {
+	public void setMobileNo(long mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 

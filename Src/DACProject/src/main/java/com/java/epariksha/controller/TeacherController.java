@@ -1,5 +1,9 @@
 package com.java.epariksha.controller;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,17 +54,18 @@ public class TeacherController {
 	public ModelAndView admin_teacher_add() 
 	{
 		List<Subject> list = subjectDao.getAll();
-		mv.addObject("subjects", list);  //attached subject lists
+		mv.addObject("subjects", list);  //attached subject lists 
 		mv.setViewName("admin/teacher_add");
 		return mv;
 	}
 
 	//working
 	@PostMapping("/admin/teacher_add") 
-	public ModelAndView teacher_add(@ModelAttribute("teacherAddForm") Teacher teacher) 
+	public ModelAndView teacher_add(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName, @RequestParam("mobileNo") long mobileNo, @RequestParam("dob") String dob, @RequestParam("userName")String userName, @RequestParam("password") String password, @RequestParam("emailId")String emailId, @RequestParam("")String qualification,@RequestParam("")int experience, @RequestParam("subjectList") ArrayList<Subject> subjectList ) throws ParseException 
 	{
-		System.out.println(teacher + " ");
-		mv.addObject("teachers", dao.save(teacher)); //request.setAttribute
+		System.out.println(firstName + " " +lastName+ " " +mobileNo + " " +dob + " " +userName + " " +password + " " +emailId + " " +qualification + " " +experience+ " " +   subjectList);
+		Date birthdate=new SimpleDateFormat("yyyy-MM-dd").parse(dob);
+		mv.addObject("teachers", dao.add(firstName, lastName, mobileNo, birthdate, userName, password, emailId, qualification, experience, subjectList)); //request.setAttribute
 		mv.setViewName("redirect:/admin/teacher");
 		return mv;
 	}

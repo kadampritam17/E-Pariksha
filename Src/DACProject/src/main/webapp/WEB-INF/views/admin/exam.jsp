@@ -33,13 +33,9 @@
 
 				<div class="card">
 					<div class="card-body">
-						<div class="card-title">
-                <a href="exam_add" class="btn btn-primary">Add Exam</a>
-              </div>
+						
 
-						<!--   <h5 class="card-title">Datatables</h5>
-              <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
- -->
+						
 						<!-- Table with stripped rows -->
 						<table class="table datatable">
 							<thead style="background-color: #37517e; color: white">

@@ -92,7 +92,7 @@
 							</div>
 							<div class="col-md-6">
 								<label for="validationDefault04" class="form-label">Subject</label>
-								<select class="form-select" multiple id="validationDefault04" name="subjectId"
+								<select class="form-select" multiple id="validationDefault04" name="subjectList"
 									required>
 									<option selected disabled value="">Multiple Select</option>
 									<%

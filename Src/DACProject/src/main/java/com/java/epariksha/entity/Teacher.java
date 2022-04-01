@@ -1,6 +1,6 @@
 package com.java.epariksha.entity;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -65,26 +65,30 @@ public class Teacher {
 	private int experience;
 
 	
-	public Teacher() {
-		super();
-	}
+	
 
-
-	public Teacher(int teacherId, List<Exam> exam, String firstName, String lastName, long mobileNo, Date dob,
+	public Teacher(String firstName, String lastName, long mobileNo, Date birthdate,
 			String userName, String password, String emailId, String qualification, int experience) {
-		super();
-		this.teacherId = teacherId;
-		this.exam = exam;
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.mobileNo = mobileNo;
-		this.dob = dob;
+		this.dob = birthdate;
 		this.userName = userName;
 		this.password = password;
 		this.emailId = emailId;
 		this.qualification = qualification;
 		this.experience = experience;
 	}
+
+
+
+
+	public Teacher() {
+		
+	}
+
+
 
 
 	public int getTeacherId() {
