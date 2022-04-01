@@ -1,7 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
-import { Link } from 'react-router-dom';
-
 export default function ExamHistory() {
 let navigate=useNavigate();
 function dashboard()
@@ -168,103 +166,53 @@ function examDash()
       <div class="row">
       <div class="col-lg-12">
 
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Previous Exam</h5>
-
-    {/* <!-- Table with stripped rows --> */}
-    <table class="table table-striped">
-      <thead style={{'background-color': '#37517e','color': 'white'}}>
-      <tr>
-        <th scope="col">Exam Name</th>
-        <th scope="col">Date</th>
-        <th scope="col">Marks</th>
-      </tr>
-      </thead>
-      <tbody>
-                    <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
-                  </tr>
-      </tbody>
-    </table>
-    {/* <!-- End Table with stripped rows --> */}
-
-  </div>
-</div>
-</div>
-
-
-        {/* <div class="col-lg-12">
-
           <div class="card">
             <div class="card-body">
-       
-             <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead style={{'background-color': '#37517e', 'color': 'white'}}>
+              <h5 class="card-title">Upcoming Exam</h5>
+
+              {/* <!-- Table with stripped rows --> */}
+              <table class="table table-striped">
+                <thead style={{'background-color': '#37517e','color': 'white'}}>
                   <tr>
+                    <th scope="col">id</th>
                     <th scope="col">Exam Name</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Marks</th>
+                    <th scope="col">Exam Date</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
+                    <th scope="row">1</th>
+                    <td>Advanced Java</td>
+                    <td>2016-05-25</td>
                   </tr>
                   <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
+                    <th scope="row">2</th>
+                    <td>Operating System</td>
+                    <td>2014-12-05</td>
                   </tr>
                   <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
+                    <th scope="row">3</th>
+                    <td>Software Development Methodologies</td>
+                    <td>2011-08-12</td>
                   </tr>
                   <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
+                    <th scope="row">4</th>
+                    <td>Web Programming Technologies</td>
+                    <td>2012-06-11</td>
                   </tr>
                   <tr>
-                    <td scope="col">Exam Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Marks</td>
+                    <th scope="row">5</th>
+                    <td>Database Technologies</td>
+                    <td>2011-04-19</td>
                   </tr>
                 </tbody>
               </table>
-              {/* <!-- End Table with stripped rows -->
+              {/* <!-- End Table with stripped rows --> */}
 
             </div>
-          </div> 
+          </div>
+    </div>
 
-        </div>*/}
-        
       </div>
     </section>
 

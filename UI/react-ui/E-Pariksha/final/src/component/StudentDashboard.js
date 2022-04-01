@@ -1,6 +1,21 @@
 import React from 'react'
-
+import Exam from './Exam'
+import { useNavigate } from 'react-router'
 export default function StudentDashboard() {
+
+let navigate=useNavigate();
+function dashboard()
+{
+  navigate('/dashboard');
+}
+function examHistory()
+{
+  navigate('/examhistory')
+}
+function examDash()
+{
+  navigate('/examdash')
+}
   return (
     <div>
         <body>
@@ -71,26 +86,26 @@ export default function StudentDashboard() {
   <ul class="sidebar-nav" id="sidebar-nav">
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="index.html">
+      <button class="nav-link collapsed" style={{'border':'none'}} onClick={dashboard}>
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
-      </a>
+      </button>
     </li>
     {/* <!-- End Dashboard Nav --> */}
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="exam.html">
+      <button class="nav-link collapsed" style={{'border':'none'}} onClick={examDash}>
         <i class="bi bi-card-list"></i>
         <span>Exam</span>
-      </a>
+      </button>
     </li>
     {/* End Exam Page Nav */}
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="examhistory.html">
+      <button class="nav-link collapsed" style={{'border':'none'}} onClick={examHistory}>
         <i class="bi bi-box-arrow-in-right"></i>
         <span>Exam History</span>
-      </a>
+      </button>
     </li>
     {/* End Exam History Page Nav */}
   </ul>
@@ -98,29 +113,87 @@ export default function StudentDashboard() {
 </aside>
 {/* End Sidebar */}
 
-<main id="main" class="main" style={{'background':'white'}}>
+<main id="main" class="main">
 
-  <div class="pagetitle">
-    <h1>Student</h1>
-    <nav>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active"><a href="student.html">Student</a></li>
-      </ol>
-    </nav>
-  </div>
-  {/* End Page Title */}
+<div class="pagetitle">
+  <h1>Dashboard</h1>
+  <nav>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><button style={{'border':'none'}} onChange={dashboard}>Home</button></li>
+      <li class="breadcrumb-item active"><button style={{'border':'none'}}onChange={dashboard}>Dashboard</button></li>
+    </ol>
+  </nav>
+</div>
+{/* <!-- End Page Title --> */}
 
-  <section class="section">
-    <div class="row">
-      <div class="col-lg-12">
-        </div>
-        
+<section class="section">
+  <div class="row">
+  <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Today's Exam</h4>
+              <center>
+              <img src="assets/img/exam.png" style={{'height':'100px' ,'width':'100px'}}></img>
+              <h5 class="card-title">Subject: </h5>
+              <h2>Advanced Java</h2>
+              <button type="button" class="btn btn-lg" style={{'background-color': '#37517e', 'color':'white'}}>Start Exam</button>
+              </center>
+            </div>
+          </div>
     </div>
-  </section>
+    <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Upcoming Exam</h5>
+
+              {/* <!-- Table with stripped rows --> */}
+              <table class="table table-striped">
+              <thead style={{'background-color': '#37517e','color': 'white'}}>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Exam Name</th>
+                    <th scope="col">Exam Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Advanced Java</td>
+                    <td>2016-05-25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Operating System</td>
+                    <td>2014-12-05</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Software Development Methodologies</td>
+                    <td>2011-08-12</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Web Programming Technologies</td>
+                    <td>2012-06-11</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Database Technologies</td>
+                    <td>2011-04-19</td>
+                  </tr>
+                </tbody>
+              </table>
+              {/* <!-- End Table with stripped rows --> */}
+
+            </div>
+          </div>
+    </div>
+    </div>
+</section>
 
 </main>
-{/* End #main */}
+{/* <!-- End #main --> */}
 
 {/* <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> */}
 

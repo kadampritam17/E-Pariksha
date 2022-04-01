@@ -16,6 +16,7 @@ import StudentDashboard from './Components/StudentDashboard';
 import Dashboard from './Components/Dashboard';
 import StudentProfile from './Components/StudentProfile';
 import ExamHistory from './Components/ExamHistory';
+import ExamDash from './Components/ExamDash';
 
 
 ReactDOM.render(
@@ -29,10 +30,10 @@ ReactDOM.render(
 
 <Route path="/login" element={<StudentLogin/>} />
 <Route path="/signup" element={<SignUp/>} />
-<Route path="/dash" element={<Dashboard/>} />
 <Route path="/dashboard" element={<StudentDashboard/>} />
 <Route path="/profile" element={<StudentProfile/>} />
 <Route path="/result" element={<Result/>} />
+<Route path="/examdash" element={<ExamDash/>} />
 <Route path="/examhistory" element={<ExamHistory/>} />
 
 </Routes>
