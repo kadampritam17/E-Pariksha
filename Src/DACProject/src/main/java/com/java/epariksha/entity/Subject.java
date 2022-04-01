@@ -25,14 +25,16 @@ public class Subject {
 	@Column(name="subject_id",unique=true,nullable=false) //primary key int
 	private int subjectId;
 	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="subject_id",nullable=false)
+	@OneToMany(cascade=CascadeType.ALL, mappedBy = "subject")
 	private List<Exam> exam;
 	
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy = "subject")
 	private List<Question> question;
 	
+	
+	@OneToMany(mappedBy="subject")
+	private List<TeacherSubject> teacherSubject;
 	
 	@JsonCreator(mode = JsonCreator.Mode.DELEGATING)
 	private Subject (@JsonProperty("subjectId") Integer subject ) {

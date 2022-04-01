@@ -36,7 +36,7 @@
 
 <%
 Exam exam =  (Exam)request.getAttribute("exam");
-Teacher t = (Teacher)request.getAttribute("teach");
+Teacher teacher = (Teacher)request.getAttribute("teach");
 
 List<Subject> list = (List<Subject>) request.getAttribute("subjects");
 %>
@@ -69,7 +69,7 @@ List<Subject> list = (List<Subject>) request.getAttribute("subjects");
 								</select>
 							</div>
 
-							<input type="hidden" class="form-control" value =<%= t.getTeacherId() %> name="teacherId"
+							<input type="hidden" class="form-control" value =<%= teacher.getTeacherId() %> name="teacherId"
 									 >
 							
 

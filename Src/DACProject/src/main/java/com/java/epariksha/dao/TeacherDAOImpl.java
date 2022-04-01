@@ -28,7 +28,16 @@ public class TeacherDAOImpl implements TeacherDAO {
 		return Optional.ofNullable(teacherRepository.findById(id).get());
 	}
 	
+	
+	//for profile update
 	public Teacher update(Teacher teacher)
+	{
+		return teacherRepository.save(teacher);
+	}
+
+
+	//to add new teacher
+	public Teacher save(Teacher teacher) 
 	{
 		return teacherRepository.save(teacher);
 	}

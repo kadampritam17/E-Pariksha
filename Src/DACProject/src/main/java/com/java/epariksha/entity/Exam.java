@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -63,6 +64,16 @@ public class Exam {
 	@Column(name = "exam_level") //varchar(10)
 	private String examLevel;
 
+	
+	@ManyToOne
+	@JoinColumn(name="subject_id")
+	private Subject subject;
+	
+	
+	@ManyToOne
+	@JoinColumn(name="teacher_id")
+	private Teacher teacher;
+	
 	
 	
 	public Exam() {

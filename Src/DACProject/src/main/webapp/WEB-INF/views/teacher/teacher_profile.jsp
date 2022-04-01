@@ -13,7 +13,7 @@
 <!-- End Sidebar -->
 
 <%
-List<Teacher> list = (List<Teacher>) request.getAttribute("teachers");
+Teacher teacher = (Teacher)request.getAttribute("teach");
 %>
 
 <main id="main" class="main">
@@ -23,7 +23,7 @@ List<Teacher> list = (List<Teacher>) request.getAttribute("teachers");
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="teacher/home">Home</a></li>
-            <li class="breadcrumb-item active"><a href="teacher">Profile</a></li>
+            <li class="breadcrumb-item active"><a href="teacher_profile">Profile</a></li>
           </ol>
         </nav>
       </div><!-- End Page Title -->
@@ -53,48 +53,41 @@ List<Teacher> list = (List<Teacher>) request.getAttribute("teachers");
   
                   <div class="tab-pane fade show active profile-overview" id="profile-overview">
                     <h5 class="card-title">Profile Details</h5>
-  					<%
-					for (Teacher al : list)
-					{
-					%>
                     <div class="row">
                       <div class="col-lg-3 col-md-4 label ">First Name</div>
-                      <div class="col-lg-9 col-md-8"><%=al.getFirstName()%></div>
+                      <div class="col-lg-9 col-md-8"><%=teacher.getFirstName()%></div>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label ">Last Name</div>
-                        <div class="col-lg-9 col-md-8"><%=al.getLastName()%></div>
+                        <div class="col-lg-9 col-md-8"><%=teacher.getLastName()%></div>
                       </div>
                     <div class="row">
                       <div class="col-lg-3 col-md-4 label">Mobile Number</div>
-                      <div class="col-lg-9 col-md-8"><%=al.getMobileNo()%></div>
+                      <div class="col-lg-9 col-md-8"><%=teacher.getMobileNo()%></div>
                     </div>
   
                     <div class="row">
                       <div class="col-lg-3 col-md-4 label">DOB</div>
-                      <div class="col-lg-9 col-md-8"><%=al.getDob()%></div>
+                      <div class="col-lg-9 col-md-8"><%=teacher.getDob()%></div>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label">Username</div>
-                        <div class="col-lg-9 col-md-8"><%=al.getUserName()%></div>
+                        <div class="col-lg-9 col-md-8"><%=teacher.getUserName()%></div>
                       </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-4 label">Email</div>
-                        <div class="col-lg-9 col-md-8"><%=al.getEmailId()%></div>
+                        <div class="col-lg-9 col-md-8"><%=teacher.getEmailId()%></div>
                       </div>
 
                     <div class="row">
                       <div class="col-lg-3 col-md-4 label">Teacher Qualification</div>
-                      <div class="col-lg-9 col-md-8"><%=al.getQualification()%></div>
+                      <div class="col-lg-9 col-md-8"><%=teacher.getQualification()%></div>
                     </div>
   
                     <div class="row">
                       <div class="col-lg-3 col-md-4 label">Year Of Experience</div>
-                      <div class="col-lg-9 col-md-8"><%=al.getExperience()%></div>
+                      <div class="col-lg-9 col-md-8"><%=teacher.getExperience()%></div>
                     </div>
-  					<%
-					}
-					%>
                   </div>
   
                   <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
