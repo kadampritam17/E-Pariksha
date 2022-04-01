@@ -10,15 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.java.epariksha.dao.ExamDAOImpl;
 import com.java.epariksha.dao.SubjectDAOImpl;
 import com.java.epariksha.dao.TeacherDAOImpl;
 import com.java.epariksha.entity.Exam;
-import com.java.epariksha.entity.Result;
 import com.java.epariksha.entity.Subject;
 import com.java.epariksha.entity.Teacher;
 
@@ -62,7 +59,7 @@ public class ExamController {
 		HttpSession session = request.getSession();
 		Teacher teacher = (Teacher)session.getAttribute("teacher");
 
-		List<Subject> list = subDAO.getAll();
+		List<Subject> list = subDAO.getSubjectListByTeacher(teacher);
 	
 		mv.addObject("teach", teacher);//request.setAttribute (session data)
 		mv.addObject("subjects", list); //request.setAttribute

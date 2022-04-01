@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.java.epariksha.entity.Subject;
+import com.java.epariksha.entity.Teacher;
 import com.java.epariksha.repository.SubjectRepository;
 
 @Service
@@ -62,5 +63,11 @@ public class SubjectDAOImpl implements SubjectDAO<Subject> {
 	@Override
 	public void delete(int id) {
 		subjectRepository.deleteById(id);
+	}
+
+	//used in exam controller to get the subject list by specific teacher
+	public List<Subject> getSubjectListByTeacher(Teacher teacher) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

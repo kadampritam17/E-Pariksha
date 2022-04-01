@@ -1,5 +1,6 @@
 package com.java.epariksha.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -9,6 +10,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -26,8 +30,23 @@ public class Teacher {
 	@OneToMany(cascade=CascadeType.ALL, mappedBy = "teacher")
 	private List<Exam> exam;
 	
+	@ManyToMany
+    @JoinTable(
+            name = "teacher_subject_info_tbl",
+            joinColumns = @JoinColumn(name = "teacher_teacher_id"),
+            inverseJoinColumns = @JoinColumn(name = "subject_subject_id")
+    )
+    private List<Subject> subjectInfoTbl = new ArrayList<>();
 	
-	
+
+	public List<Subject> getSubjectInfoTbl() {
+		return subjectInfoTbl;
+	}
+
+	public void setSubjectInfoTbl(List<Subject> subjectInfoTbl) {
+		this.subjectInfoTbl = subjectInfoTbl;
+	}
+
 
 	@Column(name = "teacher_firstname") //varchar
 	private String firstName;

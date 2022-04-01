@@ -1,5 +1,6 @@
 package com.java.epariksha.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -8,11 +9,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "subject_info_tbl")
@@ -32,13 +31,8 @@ public class Subject {
 	private List<Question> question;
 	
 	
-	@OneToMany(mappedBy="subject")
-	private List<TeacherSubject> teacherSubject;
-	
-	@JsonCreator(mode = JsonCreator.Mode.DELEGATING)
-	private Subject (@JsonProperty("subjectId") Integer subject ) {
-	    this.subjectId = subject;
-	}
+	@ManyToMany(mappedBy = "subjectInfoTbl")
+    private List<Teacher> teachersList = new ArrayList<>();
 	
 	
 

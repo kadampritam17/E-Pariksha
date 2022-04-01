@@ -1,6 +1,7 @@
 package com.java.epariksha.entity;
 
 import java.sql.Time;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -10,8 +11,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -28,14 +30,20 @@ public class Exam {
 	private int examId;
 	
 	
-	@OneToMany(mappedBy = "exam")
-	private List<ExamQuestionMap> examQuestion;
+	@ManyToMany
+    @JoinTable(
+            name = "exam_question_map_info_tbl",
+            joinColumns = @JoinColumn(name = "exam_exam_id"),
+            inverseJoinColumns = @JoinColumn(name = "question_question_id")
+    )
+    private List<Question> questionInfoTbl = new ArrayList<>();
+	
 	
 	
 	@Column(name = "exam_name")  //varchar
 	private String examName;
 	
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "exam_date")  //date
 	private Date examDate;
@@ -50,11 +58,11 @@ public class Exam {
 	
 	
 	@Column(name = "actual_time")  //Time
-	private Time actualTime;
+	private int actualTime;
 	
 	
 	@Column(name = "login_time")  //Time
-	private Time loginTime;
+	private int loginTime;
 	
 	
 	@Column(name = "exam_status") //tinyint
@@ -81,8 +89,8 @@ public class Exam {
 	}
 
 
-	public Exam(int examId, String examName, Date examDate, int noOfQuestion, int marks, Time actualTime,
-			Time loginTime, Boolean examStatus, String examLevel) {
+	public Exam(int examId, String examName, Date examDate, int noOfQuestion, int marks, int actualTime,
+			int loginTime, Boolean examStatus, String examLevel) {
 		super();
 		this.examId = examId;
 		this.examName = examName;
@@ -93,6 +101,38 @@ public class Exam {
 		this.loginTime = loginTime;
 		this.examStatus = examStatus;
 		this.examLevel = examLevel;
+	}
+
+
+	
+	
+	public List<Question> getQuestionInfoTbl() {
+		return questionInfoTbl;
+	}
+
+
+	public void setQuestionInfoTbl(List<Question> questionInfoTbl) {
+		this.questionInfoTbl = questionInfoTbl;
+	}
+
+
+	public Subject getSubject() {
+		return subject;
+	}
+
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+
+
+	public Teacher getTeacher() {
+		return teacher;
+	}
+
+
+	public void setTeacher(Teacher teacher) {
+		this.teacher = teacher;
 	}
 
 
@@ -146,22 +186,22 @@ public class Exam {
 	}
 
 
-	public Time getActualTime() {
+	public int getActualTime() {
 		return actualTime;
 	}
 
 
-	public void setActualTime(Time actualTime) {
+	public void setActualTime(int actualTime) {
 		this.actualTime = actualTime;
 	}
 
 
-	public Time getLoginTime() {
+	public int getLoginTime() {
 		return loginTime;
 	}
 
 
-	public void setLoginTime(Time loginTime) {
+	public void setLoginTime(int loginTime) {
 		this.loginTime = loginTime;
 	}
 
