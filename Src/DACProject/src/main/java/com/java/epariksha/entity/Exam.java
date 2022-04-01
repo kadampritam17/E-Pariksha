@@ -1,8 +1,8 @@
 package com.java.epariksha.entity;
 
+
 import java.sql.Time;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -28,14 +27,12 @@ public class Exam {
 	private int examId;
 	
 	
-	@OneToMany(mappedBy = "exam")
-	private List<ExamQuestionMap> examQuestion;
 	
 	
 	@Column(name = "exam_name")  //varchar
 	private String examName;
 	
-//	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "exam_date")  //date
 	private Date examDate;

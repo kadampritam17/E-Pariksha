@@ -2,18 +2,17 @@ package com.java.epariksha.entity;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -27,12 +26,27 @@ public class Question {
 	@Column(name="question_id",unique=true,nullable=false) //primary key int
 	private int questionId;
 	
-	@OneToMany(mappedBy = "question")
-	private List<ExamQuestionMap> examquestion;
 	
 	@ManyToOne
 	@JoinColumn(name="subject_id")
 	private Subject subject;
+	
+	//////////////////////////////////////
+	@ManyToMany
+	@JoinTable(
+		name="exam_question_map_info_tbl"
+		, joinColumns={
+			@JoinColumn(name="question_question_id")
+			}
+		, inverseJoinColumns={
+			@JoinColumn(name="exam_exam_id")
+			}
+		)
+	private List<Exam> exam;
+	
+	
+	/////////////////////////////////////
+	
 	
 	
 	@JsonProperty("subjectId")
@@ -41,15 +55,6 @@ public class Question {
 	    subject.setSubjectId(subjectId);
 	}
 
-
-	public List<ExamQuestionMap> getExamquestion() {
-		return examquestion;
-	}
-
-
-	public void setExamquestion(List<ExamQuestionMap> examquestion) {
-		this.examquestion = examquestion;
-	}
 
 
 	public Subject getSubject() {

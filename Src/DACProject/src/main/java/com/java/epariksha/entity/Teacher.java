@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -27,6 +29,22 @@ public class Teacher {
 	@OneToMany(cascade=CascadeType.ALL, mappedBy = "teacher")
 	private List<Exam> exam;
 	
+
+	////////////////////////////
+	
+	@ManyToMany
+	@JoinTable(
+		name="teacher_subject_info_tbl"
+		, joinColumns={
+			@JoinColumn(name="techer_teacher_id")
+			}
+		, inverseJoinColumns={
+			@JoinColumn(name="subject_subject_id")
+			}
+		)
+	private List<Subject> subjectInfoTbls;
+	
+	////////////////////////////
 	
 	
 	@Column(name = "teacher_firstname") //varchar

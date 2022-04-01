@@ -33,8 +33,6 @@ public class Subject {
 	private List<Question> question;
 	
 	
-	@OneToMany(mappedBy="subject")
-	private List<TeacherSubject> teacherSubject;
 	
 	@JsonCreator(mode = JsonCreator.Mode.DELEGATING)
 	private Subject (@JsonProperty("subjectId") Integer subject ) {
