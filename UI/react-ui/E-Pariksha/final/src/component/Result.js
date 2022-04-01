@@ -4,6 +4,7 @@ export default function Result() {
   return (
     <>
     <p>
+      <br/><br/>
     <div class="card" style={{'width': '70%', 'padding': '10px','margin': '0 auto'}}>
       <div class="card-body" style={{'textAlign':'center'}}>
         <div class="container mt-5">
@@ -27,48 +28,104 @@ export default function Result() {
       </div>
     </div>
     </p>
-
+    <br/>
     <p>
     <div class="card" style={{'width': '70%', 'padding': '10px','margin': '0 auto'}}>
       <div class="card-body">
         <div class="icon">
-        <h3>Overall Performance Summary</h3>
+        <h3 class="text-center" style={{'padding': '10px'}}>Overall Performance Summary</h3>
+        {/* <!-- Card with an image on left --> */}
+          <div class="card mb-3" style={{'margin-left':'20%','margin-right':'20%','margin-top':'20px'}}>
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="assets/img/trophy.png" class="img-fluid rounded-start" alt="..."  style={{'height':'150px' ,'width':'150px','margin-left':'60%','padding':'10%'}}/>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text"> <br/><br/>
+                  <center>
+                     Score:<br/>
+                    40/50
+                  </center></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End Card with an image on left --> */}
+          {/* <!-- Card with an image on left --> */}
+          <div class="card mb-3" style={{'margin-left':'20%','margin-right':'20%'}}>
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="assets/img/attempted.png" class="img-fluid rounded-start" alt="..."  style={{'height':'150px' ,'width':'120px','margin-left':'68%','padding':'10%'}}/>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text">
+                  <br/><br/>
+                  <center>
+                     Attempted:<br/>
+                        50
+                      </center> 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End Card with an image on left --> */}
 
-          <table class="table">
+
+
+
+
+
+
+
+
+{/* 
+        <div class="row">
+          <div class="col-lg-6">
+              <table class="table" style={{'width':'40%', 'margin-left':'30%'}}>
                 <tbody>
                   <tr class="table-success">
                     <center>
                       <th scope="row"><img src="assets/img/trophy.png" style={{'height':'100px' ,'width':'100px'}}></img></th>
                     </center>
-                    <td>
-                    <center>
-                      <p>Score:<br/>
-                          40/50
-                      </p>
-                      </center>
-                    </td>
                   </tr>
                   
                   <tr class="table-warning">
                   <center>
                   <th scope="row"><img src="assets/img/attempted.png" style={{'height':'100px' ,'width':'80px'}}></img></th>
                   </center>
-                    <td>
-                      <center>
-                      <p>Attempted:<br/>
-                        50
-                      </p>
-                      </center>
-                    </td>
                   </tr>
                 </tbody>
               </table>
-              {/* <!-- End Table Variants --> */}
-
-
-
-          <center><button class="btn btn-info btn-lg">Home</button></center> 
-        </div>
+              </div>
+              <div class="col-lg-6">
+              <table class="table" style={{'width':'40%'}}>
+                <tbody>
+                  <tr class="table-success">
+                  <center>
+                      <p><br/><br/>Score:<br/>
+                          40/50
+                      </p>
+                      </center>
+                  </tr>
+                  
+                  <tr class="table-warning">
+                  <center>
+                      <p><br/><br/>Attempted:<br/>
+                        50
+                      </p>
+                      </center>
+                  </tr>
+                </tbody>
+              </table>
+              </div>  
+            </div>
+          
+        </div> */}
+        <center><button class="btn btn-info btn-lg">Home</button></center> 
+      </div>
       </div>
     </div>
     </p>

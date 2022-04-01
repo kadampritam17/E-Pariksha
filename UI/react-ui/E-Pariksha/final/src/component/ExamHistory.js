@@ -16,6 +16,10 @@ function examDash()
 {
   navigate('/examdash')
 }
+function profile()
+{
+  navigate('/profile')
+}
   return (
 <>
        
@@ -53,69 +57,67 @@ function examDash()
 <body>
 
     {/* <!-- ======= Header ======= --> */}
-    <header id="header" class="header fixed-top d-flex align-items-center">
+  <header id="header" class="header fixed-top d-flex align-items-center">
 
-      <div class="d-flex align-items-center justify-content-between">
-        <i class="bi bi-list toggle-sidebar-btn"></i>
-        <a href="index.html" class="logo d-flex align-items-center">
-          <img src="assets/img/EPariksha.png" alt=""/>
-          <span class="d-none d-lg-block">E-Pariksha</span>
-        </a>
-        
-      </div>
-      {/* <!-- End Logo --> */}
+<div class="d-flex align-items-center justify-content-between">
+  <i class="bi bi-list toggle-sidebar-btn"></i>
+  <a href="index.html" class="logo d-flex align-items-center">
+    <img src="assets/img/EPariksha.png" alt=""/>
+    <span class="d-none d-lg-block">E-Pariksha</span>
+  </a>
   
-  
-      <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
-  
-     
-  
-          <li class="nav-item dropdown pe-3">
-  
-            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"/>
-              <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-            </a>
-            {/* <!-- End Profile Iamge Icon --> */}
-  
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-              <li class="dropdown-header">
-                <h6>Ram</h6>
-                <span>PRN-111</span>
-              </li>
-              <li>
-                <hr class="dropdown-divider"/>
-              </li>
-  
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="user-profile.html">
-                  <i class="bi bi-person"></i>
-                  <span>My Profile</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider"/>
-              </li>
-  
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Sign Out</span>
-                </a>
-              </li>
-  
-            </ul>
-            {/* <!-- End Profile Dropdown Items --> */}
-          </li>
-          {/* <!-- End Profile Nav --> */}
-  
-        </ul>
-      </nav>
-      {/* <!-- End Icons Navigation --> */}
-  
-    </header>
-    {/* <!-- End Header --> */}
+</div>
+{/* <!-- End Logo --> */}
+
+
+<nav class="header-nav ms-auto">
+  <ul class="d-flex align-items-center">
+    <li class="nav-item dropdown pe-3">
+
+      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+        <img src="assets/img/profile.jfif" alt="Profile" class="rounded-circle"/>
+        <span class="d-none d-md-block dropdown-toggle ps-2">Student</span>
+      </a>
+      {/* <!-- End Profile Image Icon --> */}
+
+      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+        <li class="dropdown-header">
+          <h6>XYZ</h6>
+          <span>Web Designer</span>
+        </li>
+        <li>
+          <hr class="dropdown-divider"/>
+        </li>
+
+        <li>
+          <button class="dropdown-item d-flex align-items-center" style={{'border':'none'}} onClick={profile}>
+            <i class="bi bi-person"></i>
+            <span>My Profile</span>
+          </button>
+        </li>
+        <li>
+          <hr class="dropdown-divider"/>
+        </li>
+
+        <li>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+          </a>
+        </li>
+
+      </ul>
+      {/* <!-- End Profile Dropdown Items --> */}
+    </li>
+    {/* <!-- End Profile Nav --> */}
+
+  </ul>
+</nav>
+{/* <!-- End Icons Navigation --> */}
+
+</header>
+{/* <!-- End Header --> */}
+
 
     
   {/* <!-- ======= Sidebar ======= --> */}
@@ -157,8 +159,8 @@ function examDash()
       <h1>Exam History</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><button style={{'border':'none'}} onChange={dashboard}>Home</button></li>
-          <li class="breadcrumb-item active"><button style={{'border':'none'}} onChange={examHistory}>Exam History</button></li>
+          <li class="breadcrumb-item"><button style={{'border':'none'}} onClick={dashboard}>Home</button></li>
+          <li class="breadcrumb-item active"><button style={{'border':'none'}} onClick={examHistory}>Exam History</button></li>
         </ol>
       </nav>
     </div>
