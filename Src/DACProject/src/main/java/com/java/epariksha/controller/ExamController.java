@@ -28,10 +28,10 @@ public class ExamController {
 
 	@Autowired
 	SubjectDAOImpl subDAO;
-	
+
 	@Autowired
 	TeacherDAOImpl TeacherDAO;
-	
+
 	ModelAndView mv = new ModelAndView(); 
 
 	//--------------------------------------------------------------
@@ -51,36 +51,36 @@ public class ExamController {
 	//------------------------------------------------------------------
 	//	TEACHER CONTROLLERS
 
-	
+
 	//working
 	@GetMapping("/teacher/exam_add")
 	public ModelAndView teacher_exam_add(HttpServletRequest request) 
 	{
 		HttpSession session = request.getSession();
 		Teacher teacher = (Teacher)session.getAttribute("teacher");
-
-		List<Subject> list = subDAO.getSubjectListByTeacher(teacher);
-	
+//		System.out.println("session id teacher " +  teacher);
+		List<Subject> list = subDAO.getAll();
+//		List<Subject> list = subDAO.getSubjectListByTeacher(teacher);
 		mv.addObject("teach", teacher);//request.setAttribute (session data)
 		mv.addObject("subjects", list); //request.setAttribute
 		mv.setViewName("teacher/exam_add");
 		return mv;
 	}
-	
-	
+
+
 	@PostMapping("/teacher/exam_add") 
 	public ModelAndView subject_add(@ModelAttribute("formexam")Exam exam) 
 	{
-		
+
 		System.out.println(exam);
 		dao.save(exam);
-		
+
 		mv.addObject("exam", dao.save(exam)); //request.setAttribute
 		mv.setViewName("redirect:/teacher/exam");
 		return mv;
 	}
-	
-	
+
+
 	//done
 	@GetMapping("/teacher/exam")
 	public ModelAndView teacher_exam() 

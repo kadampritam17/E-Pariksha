@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -23,6 +24,7 @@ import com.java.epariksha.entity.Subject;
 import com.java.epariksha.entity.Teacher;
 
 @Controller
+@Scope("session")
 public class TeacherController {
 
 
@@ -49,7 +51,7 @@ public class TeacherController {
 	}
 
 
-	//working
+	//done
 	@GetMapping("/admin/teacher_add")
 	public ModelAndView admin_teacher_add() 
 	{
@@ -59,7 +61,7 @@ public class TeacherController {
 		return mv;
 	}
 
-	//working
+	//done
 	@PostMapping("/admin/teacher_add") 
 	public ModelAndView teacher_add(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName, @RequestParam("mobileNo") long mobileNo, @RequestParam("dob") String dob, @RequestParam("userName")String userName, @RequestParam("password") String password, @RequestParam("emailId")String emailId, @RequestParam("")String qualification,@RequestParam("")int experience, @RequestParam("subjectList") ArrayList<Subject> subjectList ) throws ParseException 
 	{

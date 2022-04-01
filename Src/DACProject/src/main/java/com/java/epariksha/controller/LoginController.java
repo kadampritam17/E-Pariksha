@@ -62,8 +62,8 @@ public class LoginController {
 	
 	
 	@RequestMapping(value = "/admin/adminlogout", method = RequestMethod.GET)
-	public String adminlogout(HttpSession session) {
-		session.removeAttribute("username");
+	public String adminlogout(HttpServletRequest request) {
+		request.getSession().invalidate();
 		return "redirect:../index";
 	}
 	
@@ -103,8 +103,8 @@ public class LoginController {
 	
 	//done
 	@RequestMapping(value = "/teacher/teacherlogout", method = RequestMethod.GET)
-	public String teacherlogout(HttpSession session) {
-		session.removeAttribute("teacher");
+	public String teacherlogout(HttpServletRequest request) {
+		request.getSession().invalidate();
 		return "redirect:../index";
 	}
 
