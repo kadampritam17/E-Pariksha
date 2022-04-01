@@ -3,20 +3,16 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import './index.css';
 //import App from './App';
-import Exam from './Exam';
-import Start from './Start';
 
-
-import Exam from './Components/Exam';
-import Start from './Components/Start';
-import Result from './Components/Result';
-import StudentLogin from './Components/StudentLogin';
-import SignUp from './Components/SignUp';
-import StudentDashboard from './Components/StudentDashboard';
-import Dashboard from './Components/Dashboard';
-import StudentProfile from './Components/StudentProfile';
-import ExamHistory from './Components/ExamHistory';
-import ExamDash from './Components/ExamDash';
+import Exam from './component/Exam';
+import Start from './component/Start';
+import Result from './component/Result';
+import StudentLogin from './component/StudentLogin';
+import SignUp from './component/SignUp';
+import StudentDashboard from './component/StudentDashboard';
+import StudentProfile from './component/StudentProfile';
+import ExamHistory from './component/ExamHistory';
+import ExamDash from './component/ExamDash';
 
 
 ReactDOM.render(
