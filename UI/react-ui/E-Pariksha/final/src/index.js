@@ -35,7 +35,6 @@ ReactDOM.render(
 <Route path="/result" element={<Result/>} />
 <Route path="/examdash" element={<ExamDash/>} />
 <Route path="/examhistory" element={<ExamHistory/>} />
-
 </Routes>
 </Router>
       
