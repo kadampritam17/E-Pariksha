@@ -18,7 +18,7 @@ public class ExamDAOImpl implements ExamDAO {
 	@Autowired
 	ExamRepository examRepository;
 
-	
+
 	public List<Exam> getAll() {
 		return examRepository.findAll();
 	}
@@ -28,33 +28,26 @@ public class ExamDAOImpl implements ExamDAO {
 		return examRepository.findAllPreviousExams();
 	}
 
-	
-//	public Exam save(Exam exam) {
-//		return examRepository.save(exam);
-//	}
-
 
 	public Exam add(Subject subject, Teacher teacher, String examName, Date newexamdate, int actualTime, int loginTime,
-			String examLevel, int noOfQue, List<Question> queList, int marks) {
+			String examLevel, int noOfQue, List<Question> queList, int marks) 
+	{
 		Exam exam= new Exam(subject,teacher,actualTime,newexamdate,examLevel,examName,noOfQue,loginTime,marks);
+
 		exam.setQuestionInfoTbl(queList);
 		examRepository.save(exam);
-		
+
 		return exam;
 	}
-	
-	/*
-	  public Teacher add(String firstName, String lastName, long mobileNo, Date birthdate, String userName, String password,
-			String emailId, String qualification, int experience, List<Subject> subjectList) {
 
-		Teacher teacher = new Teacher(firstName, lastName, mobileNo, birthdate, userName, password, emailId, qualification, experience);
 
-		teacher.setSubjectInfoTbl(subjectList);
-		teacherRepository.save(teacher);
-		return  teacher;
+	public List<Question> getQuestionByExamId(int id) {
+		
+		List<Question> list = examRepository.getQuestionByExamId(id);
+		return list;
 	}
-	 */
-	
-	
-	
+
+
+
+
 }
