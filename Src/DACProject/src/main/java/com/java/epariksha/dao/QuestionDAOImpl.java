@@ -20,8 +20,7 @@ public class QuestionDAOImpl implements QuestionDAO {
 	}
 	
 	
-	public String save(Question que) {
-		questionRepository.save(que);
-		return "success";
+	public Object save(Question que) {
+		return questionRepository.save(que);
 	}
 }

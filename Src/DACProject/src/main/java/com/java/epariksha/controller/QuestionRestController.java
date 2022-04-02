@@ -24,18 +24,18 @@ public class QuestionRestController {
 	QuestionDAOImpl dao;
 
 	
-	@GetMapping("/admin/getquestions")
+	@GetMapping("/admin/questions")
 	public List<Question> admin_question() {
 		return dao.getAll();
 	}
 	
 	
-	@PostMapping("/admin/question_add") 
-	public String question_add(@RequestBody Question que)
-	{
-		return dao.save(que);
-	}
-	
+//	@PostMapping("/admin/question_add") 
+//	public String question_add(@RequestBody Question que)
+//	{
+//		return dao.save(que);
+//	}
+//	
 
 	/*
 	 * @PostMapping("/admin/question_add") public ModelAndView question_add(

@@ -58,7 +58,7 @@
             <ul>
               <li><a href="admin_login">Admin</a></li>
               <li><a href="teacher_login">Teacher</a></li>
-              <li><a href="student_login">Student</a></li>
+              <li><a href="http://localhost:3000">Student</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>

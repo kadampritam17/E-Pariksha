@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.java.epariksha.entity.Question;
 import com.java.epariksha.entity.Student;
 import com.java.epariksha.repository.StudentRepository;
 
@@ -20,9 +21,12 @@ public class StudentDAOImpl implements StudentDAO {
 	}
 
 	public Student getDetails(int studentId) {
-		return studentRepository.findById(studentId).get();
-	}
+		return studentRepository.findById(studentId).get();	}
 
-	
+//	//for React
+//	
+//	public Object save(Student stud) {
+//		return studentRepository.save(stud);
+//	}
 
 }
