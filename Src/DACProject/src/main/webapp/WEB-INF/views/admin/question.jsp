@@ -43,7 +43,7 @@ List<Question> list = (List<Question>) request.getAttribute("questions");
 							<thead style="background-color: #37517e; color: white">
 								<tr>
 									<th scope="col">Id</th>
-									<th scope="col">Subject Id</th>
+								<!-- 	<th scope="col">Subject Id</th> -->
 									<th scope="col">Question Level</th>
 									<th scope="col">Question</th>
 									<th scope="col">Option 1</th>
@@ -60,7 +60,7 @@ List<Question> list = (List<Question>) request.getAttribute("questions");
 								%>
 								<tr>
 									<td scope="row"><%=al.getQuestionId()%></td>
-									<td scope="col"><%=al.getQuestionId()%> subject name</td>
+							<%-- 		<td scope="col"><%=al.getQuestionId()%> subject name</td> --%>
 									<td scope="col"><%=al.getQuestionLevel()%></td>
 									<td scope="col"><%=al.getQuestion()%></td>
 									<td scope="col"><%=al.getOption1()%></td>
@@ -72,7 +72,8 @@ List<Question> list = (List<Question>) request.getAttribute("questions");
 									<!-- <a href="question_update"
 										class="btn btn-primary "><i class="bi-pencil"></i></a> -->
 										<a
-										href="#" class="btn btn-danger"><i class="bi-trash"></i></a></td>
+										href="question_delete/<%=al.getQuestionId()%>
+										" class="btn btn-danger"><i class="bi-trash"></i></a></td>
 								</tr>
 								<%
 								}

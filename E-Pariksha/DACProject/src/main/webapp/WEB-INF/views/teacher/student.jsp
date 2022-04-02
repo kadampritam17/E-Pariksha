@@ -78,9 +78,10 @@ List<Student> list = (List<Student>) request.getAttribute("students");
 									<td scope="col"><%=al.getHscPercentage()%></td>
 									<td scope="col"><%=al.getDegreePercentage()%></td>
 									<%-- <td scope="col"><%=al.getIsActive()%></td> --%>
-									<td scope="col"><a href="student_update"
-										class="btn btn-primary "><i class="bi-pencil"></i></a><a
-										href="#" class="btn btn-danger"><i class="bi-trash"></i></a></td>
+									<td scope="col">
+								<!-- 	<a href="student_update"
+										class="btn btn-primary "><i class="bi-pencil"></i></a> --><a
+										href="student_delete/<%=al.getStudentId()%>" class="btn btn-danger"><i class="bi-trash"></i></a></td>
 								</tr>
 								<%
 								}

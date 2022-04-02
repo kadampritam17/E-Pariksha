@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.java.epariksha.dao.QuestionDAOImpl;
@@ -35,6 +36,14 @@ public class QuestionController {
 		return mv;
 	}
 
+	@GetMapping("/admin/question_delete/{id}")
+	public ModelAndView deleteQuestion(@PathVariable int id) 
+	{
+		System.out.println(id);
+		dao.delete(id);
+		mv.setViewName("redirect:/admin/question");
+		return mv;
+	}
 
 
 
@@ -53,4 +62,14 @@ public class QuestionController {
 		mv.setViewName("teacher/question");
 		return mv;
 	}
+	
+	@GetMapping("/teacher/question_delete/{id}")
+	public ModelAndView teacher_deleteQuestion(@PathVariable int id) 
+	{
+		System.out.println(id);
+		dao.delete(id);
+		mv.setViewName("redirect:/teacher/question");
+		return mv;
+	}
+
 }

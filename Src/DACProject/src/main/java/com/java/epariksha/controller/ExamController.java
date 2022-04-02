@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -65,6 +66,17 @@ public class ExamController {
 		return mv;
 	}
 
+	//done
+		@GetMapping("/admin/exam_delete/{id}")
+		public ModelAndView deleteExam(@PathVariable int id) 
+		{
+			System.out.println(id);
+			dao.delete(id);
+			mv.setViewName("redirect:/admin/exam");
+			return mv;
+		}
+
+	
 
 	//------------------------------------------------------------------
 	//	TEACHER CONTROLLERS
@@ -137,4 +149,18 @@ public class ExamController {
 		mv.setViewName("teacher/exam");
 		return mv;
 	}
+	
+	
+	//done
+		@GetMapping("/teacher/exam_delete/{id}")
+		public ModelAndView teacher_deleteExam(@PathVariable int id) 
+		{
+			System.out.println(id);
+			dao.delete(id);
+			mv.setViewName("redirect:/teacher/exam");
+			return mv;
+		}
+
+	
+	
 }

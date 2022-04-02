@@ -43,8 +43,9 @@
 							<thead style="background-color: #37517e; color: white">
 								<tr>
 									<th scope="col">Id</th>
-									<th scope="col">Subject Id</th>
-									<th scope="col">Teacher Id</th>
+									<th scope="col">Exam Name</th>
+									<th scope="col">Subject Name</th>
+									<th scope="col">Teacher Name</th>
 									<th scope="col">Date</th>
 									<th scope="col">No Of Questions</th>
 									<th scope="col">Marks</th>
@@ -52,7 +53,7 @@
 									<th scope="col">Login Time</th>
 									<th scope="col">Status</th>
 									<th scope="col">Level</th>
-									<th scope="col">Action</th>
+								<!-- 	<th scope="col">Action</th> -->
 								</tr>
 							</thead>
 							<tbody>
@@ -60,9 +61,10 @@
 								for (Exam al : list) {
 								%>
 								<tr>
-									<td scope="row"><%=al.getExamId()%></td>
-									<td scope="col"><%=al.getExamName()%></td>
-									<td scope="col"><%=al.getExamName()%>Teacher Name</td>
+								<td scope="row"><%=al.getExamId()%></td>
+									<td scope="row"><%=al.getExamName()%></td>
+									<td scope="col"><%=al.getSubject().getSubjectName()%></td>
+									<td scope="col"><%=al.getTeacher().getFirstName()%> <%= al.getTeacher().getLastName()%></td>
 									<td scope="col"><%=al.getExamDate() %></td>
 									<td scope="col"><%=al.getNoOfQuestion()%></td>
 									<td scope="col"><%=al.getMarks()%></td>
@@ -70,9 +72,9 @@
 									<td scope="col"><%=al.getLoginTime()%></td>
 									<td scope="col"><%=al.getExamStatus()%></td>
 									<td scope="col"><%=al.getExamLevel()%></td>
-									<td scope="col"><a href="exam_update"
+									<!-- <td scope="col"><a href="exam_update"
 										class="btn btn-primary"><i class="bi-pencil"></i></a><a href="#"
-										class="btn btn-danger"><i class="bi-trash"></i></a></td>
+										class="btn btn-danger"><i class="bi-trash"></i></a></td> -->
 								</tr>
 								<%
 								}

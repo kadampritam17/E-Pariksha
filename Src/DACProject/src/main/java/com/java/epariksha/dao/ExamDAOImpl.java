@@ -46,7 +46,11 @@ public class ExamDAOImpl implements ExamDAO {
 		List<Question> list = examRepository.getQuestionByExamId(id);
 		return list;
 	}
-
+	
+	//done
+	public void delete(int id) {
+		examRepository.deleteById(id);
+	}
 
 
 

@@ -45,6 +45,7 @@
 								<tr>
 									<th scope="col">Id</th>
 									<th scope="col">Exam Name</th>
+									<th scope="col">Subject Name</th>
 									<th scope="col">Teacher Name</th>
 									<th scope="col">Date</th>
 									<th scope="col">No Of Questions</th>
@@ -62,8 +63,9 @@
 								%>
 								<tr>
 									<td scope="row"><%=al.getExamId()%></td>
-									<td scope="col"><%=al.getExamName()%></td>
-									<td scope="col"><%=al.getExamName()%>Teacher Name</td>
+									<td scope="row"><%=al.getExamName()%></td>
+									<td scope="col"><%=al.getSubject().getSubjectName()%></td>
+									<td scope="col"><%=al.getTeacher().getFirstName()%> <%= al.getTeacher().getLastName()%></td>
 									<td scope="col"><%=al.getExamDate()%></td>
 									<td scope="col"><%=al.getNoOfQuestion()%></td>
 									<td scope="col"><%=al.getMarks()%></td>
@@ -71,9 +73,12 @@
 									<td scope="col"><%=al.getLoginTime()%></td>
 									<td scope="col"><%=al.getExamStatus()%></td>
 									<td scope="col"><%=al.getExamLevel()%></td>
-									<td scope="col"><a href="exam_update"
-										class="btn btn-primary"><i class="bi-pencil"></i></a><a href="#"
+									<td scope="col">
+									<!-- <a href="exam_update"
+										class="btn btn-primary"><i class="bi-pencil"></i></a> -->
+										<a href="exam_delete/<%=al.getExamId()%>"
 										class="btn btn-danger"><i class="bi-trash"></i></a></td>
+
 								</tr>
 								<%
 								}

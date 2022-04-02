@@ -55,6 +55,29 @@ public class Question {
 
 
 
+	public List<Exam> getExamList() {
+		return examList;
+	}
+
+
+	public void setExamList(List<Exam> examList) {
+		this.examList = examList;
+	}
+
+
+	public Subject getSubject() {
+		return subject;
+	}
+
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+
+
+
+
+
 	@Column(name = "question_level")  //varchar
 	private String questionLevel;
 

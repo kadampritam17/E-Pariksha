@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="validationDefault02" class="form-label">User Name</label>
-                                    <input type="text" class="form-control" id="validationDefault02" value="" name="userName" placeholder="Enter Your PRN No."
+                                    <input type="text" class="form-control" id="validationDefault02" value="" name="userName" placeholder="Enter Username"
                                         required>
                                 </div>
                                 <div class="col-md-6">

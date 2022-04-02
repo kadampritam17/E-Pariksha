@@ -18,6 +18,9 @@ public class TeacherDAOImpl  {
 	@Autowired
 	TeacherRepository teacherRepository;
 
+	public void delete(int id) {
+		teacherRepository.deleteById(id);
+	}
 
 	
 

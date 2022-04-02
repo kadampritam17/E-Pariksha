@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -57,6 +58,18 @@ public class StudentController {
 	}
 
 
+	//done
+	@GetMapping("/admin/student_delete/{id}")
+	public ModelAndView deleteStudent(@PathVariable int id) 
+	{
+		System.out.println(id);
+		dao.delete(id);
+		mv.setViewName("redirect:/admin/student");
+		return mv;
+	}
+
+
+
 
 	//------------------------------------------------------------------
 	//	TEACHER CONTROLLERS
@@ -71,6 +84,16 @@ public class StudentController {
 		List<Student> list = dao.getAll();
 		mv.addObject("students", list); //request.setAttribute
 		mv.setViewName("teacher/student");
+		return mv;
+	}
+
+	//done
+	@GetMapping("/teacher/student_delete/{id}")
+	public ModelAndView delete_Student(@PathVariable int id) 
+	{
+		System.out.println(id);
+		dao.delete(id);
+		mv.setViewName("redirect:/teacher/student");
 		return mv;
 	}
 }

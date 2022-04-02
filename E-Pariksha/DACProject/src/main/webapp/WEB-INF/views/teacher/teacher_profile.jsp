@@ -43,14 +43,13 @@ Teacher teacherProfile = (Teacher)request.getAttribute("teach");
                     <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
                   </li>
   
-                  <li class="nav-item">
+                 <!--  <li class="nav-item">
                     <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
                   </li>
   
                   <li class="nav-item">
                     <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
-                  </li>
-  
+                  </li>  -->
                 </ul>
                 <div class="tab-content pt-2">
   
@@ -93,7 +92,7 @@ Teacher teacherProfile = (Teacher)request.getAttribute("teach");
                     </div>
                   </div>
   
-                  <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+            <%--       <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
   
                     <!-- Profile Edit Form -->
                     
@@ -192,7 +191,7 @@ Teacher teacherProfile = (Teacher)request.getAttribute("teach");
                     </form><!-- End Change Password Form -->
   
                   </div>
-  
+   --%>
                 </div><!-- End Bordered Tabs -->
   
               </div>

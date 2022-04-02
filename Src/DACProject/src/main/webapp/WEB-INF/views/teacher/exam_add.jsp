@@ -47,7 +47,7 @@ List<Subject> list = (List<Subject>) request.getAttribute("subjects");
 
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">Add Exam <%= teacher.getExperience() %></h5>
+						<h5 class="card-title">Add Exam </h5>
 
 				<form:form class="row g-3" method="post" action="exam_add"  modelAttribute="formexam" enctype="multipart/form-data">
 											
@@ -74,7 +74,7 @@ List<Subject> list = (List<Subject>) request.getAttribute("subjects");
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Exam
 									Name</label> <input type="text" class="form-control" name="examName"
-									placeholder="Subject name" required>
+									placeholder="Exam name" required>
 							</div>
 
 							<div class="col-md-6">

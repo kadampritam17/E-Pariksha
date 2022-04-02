@@ -28,5 +28,9 @@ public class StudentDAOImpl implements StudentDAO {
 		return studentRepository.save(student);
 	}
 
+	public void delete(int id) {
+		studentRepository.deleteById(id);
+	}
+
 
 }

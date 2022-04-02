@@ -77,7 +77,8 @@
 									<td scope="col">
 									 
 									 <!-- <a href="teacher_update" class="btn btn-primary "><i class="bi-pencil"></i></a> -->
-										<a href="#" class="btn btn-danger"><i class="bi-trash"></i></a></td>
+										<a href="teacher_delete/<%=al.getTeacherId()%>
+" class="btn btn-danger"><i class="bi-trash"></i></a></td>
 									</tr>
 								<%
 								}

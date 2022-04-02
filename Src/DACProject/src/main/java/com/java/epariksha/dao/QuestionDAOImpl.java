@@ -14,7 +14,7 @@ public class QuestionDAOImpl implements QuestionDAO {
 	@Autowired
 	QuestionRepository questionRepository;
 
-	
+	//done
 	public List<Question> getAll() {
 		return questionRepository.findAll();
 	}
@@ -24,4 +24,10 @@ public class QuestionDAOImpl implements QuestionDAO {
 		
 		return questionRepository.save(que);
 	}
+	
+	//done
+	public void delete(int id) {
+		questionRepository.deleteById(id);
+	}
+
 }
