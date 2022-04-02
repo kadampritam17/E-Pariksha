@@ -19,6 +19,7 @@ import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -32,7 +33,7 @@ public class Question {
 	@Column(name="question_id",unique=true,nullable=false) //primary key int
 	private int questionId;
 	
-	
+	@JsonIgnore				//check this or remove //sumit
 	@ManyToMany(mappedBy = "questionInfoTbl")
 //	@Fetch(value = FetchMode.SUBSELECT)
 	@LazyCollection(LazyCollectionOption.FALSE)
