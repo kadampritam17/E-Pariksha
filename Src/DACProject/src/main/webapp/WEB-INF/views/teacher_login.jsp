@@ -59,10 +59,10 @@
 											<input type="checkbox" checked>
 											<span class="checkmark"></span>
 										</label> -->
-										<p class="text-left"><a data-toggle="tab" href="#signup">Sign Up</a></p>
+										<!-- <p class="text-left"><a data-toggle="tab" href="#signup">Sign Up</a></p> -->
 									</div>
 									<div class="w-50 text-md-right">
-										<a href="#">Forgot Password</a>
+										<!-- <a href="#">Forgot Password</a> -->
 									</div>
 								</div>
 							</form>

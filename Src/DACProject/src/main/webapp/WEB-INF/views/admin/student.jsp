@@ -22,7 +22,7 @@ List<Student> list = (List<Student>) request.getAttribute("students");
 		<h1>Student</h1>
 		<nav>
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="admin/home">Home</a></li>
+				<li class="breadcrumb-item"><a href="home">Home</a></li>
 				<li class="breadcrumb-item active"><a href="student">Student</a></li>
 			</ol>
 		</nav>
@@ -78,10 +78,11 @@ List<Student> list = (List<Student>) request.getAttribute("students");
 									<td scope="col"><%=al.getHscPercentage()%></td>
 									<td scope="col"><%=al.getDegreePercentage()%></td>
 									<%-- <td scope="col"><%=al.getIsActive()%></td> --%>
-									<td scope="col"><a href="student_update"
-										class="btn btn-primary "><i class="bi-pencil"></i></a><a
-										href="#" class="btn btn-danger"><i class="bi-trash"></i></a></td>
-								</tr>
+									 <td scope="col">
+									 
+									 <!--<a href="student_update" class="btn btn-primary "><i class="bi-pencil"></i></a> -->
+										<a href="#" class="btn btn-danger"><i class="bi-trash"></i></a></td>
+									</tr>
 								<%
 								}
 								%>

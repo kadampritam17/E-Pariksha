@@ -24,7 +24,7 @@
             <h1>Student</h1>
             <nav>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="admin/home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="home">Home</a></li>
                     <li class="breadcrumb-item active"><a href="admin/student">Student</a></li>
                 </ol>
             </nav>
