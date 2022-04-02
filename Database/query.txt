@@ -1,3 +1,11 @@
 insert into teacher_info_tbl values(default, "1989-01-11", "ram@gmail.com", 15, "Ram", "Sharma", 9988774411, "ram", 15,"ram123");
 
- insert into STUDENT_info_tbl values(default, 75, "2000-11-14", "pratham@gmail.com", "pratham", 89, 1, "kadam", 8899556622, "pratham", 90, "pratham@123");
+insert into STUDENT_info_tbl values(default, 75, "2000-11-14", "pratham@gmail.com", "pratham", 89, 1, "kadam", 8899556622, "pratham", 90, "pratham@123");
+
+insert into exam_info_tbl values(1,"08:30:00",'2022-4-01',"easy","O.S. mcq",1,"09:00:00",40,25,1,2);
+
+insert into subject_info_tbl values(default,'web technology','wpt');
+
+insert into result_info_tbl values(1,32,1,1);
+
+select count(student_id) from result_info_tbl where exam_id = 1;

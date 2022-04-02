@@ -66,8 +66,9 @@ public class SubjectDAOImpl implements SubjectDAO<Subject> {
 	}
 
 	//used in exam controller to get the subject list by specific teacher
-	public List<Subject> getSubjectListByTeacher(Teacher teacher) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	public List<Subject> getSubjectListByTeacher(Teacher teacher) {
+//		System.out.println(teacher);
+//		
+//		return subjectRepository.getSubjectListByTeacher(teacher);
+//	}
 }

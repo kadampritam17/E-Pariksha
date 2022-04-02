@@ -1,5 +1,3 @@
-
-
 <%@page import="java.util.List"%>
 <%@page import="com.java.epariksha.entity.Exam"%>
 <%@page import="com.java.epariksha.entity.Subject"%>
@@ -27,7 +25,7 @@
 		<h1>Exam</h1>
 		<nav>
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="teacher/home">Home</a></li>
+				<li class="breadcrumb-item"><a href="home">Home</a></li>
 				<li class="breadcrumb-item active"><a href="exam">Exam</a></li>
 			</ol>
 		</nav>
@@ -49,14 +47,14 @@ List<Subject> list = (List<Subject>) request.getAttribute("subjects");
 
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">Add Exam</h5>
+						<h5 class="card-title">Add Exam <%= teacher.getExperience() %></h5>
 
-				<form:form class="row g-3" method="post" action="exam_add"  modelAttribute="formexam">
+				<form:form class="row g-3" method="post" action="exam_add"  modelAttribute="formexam" enctype="multipart/form-data">
 											
 
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Subject</label>
-								<select class="form-select" id="floatingSelect" name = "subjectId">
+								<select class="form-select" id="floatingSelect" name = "subject">
 									<option selected>Select</option>
 										 <%
 								for (Subject al : list) {
@@ -69,7 +67,7 @@ List<Subject> list = (List<Subject>) request.getAttribute("subjects");
 								</select>
 							</div>
 
-							<input type="hidden" class="form-control" value =<%= teacher.getTeacherId() %> name="teacherId"
+							<input type="hidden" class="form-control" value =<%= teacher.getTeacherId() %> name="teacher"
 									 >
 							
 
@@ -81,26 +79,31 @@ List<Subject> list = (List<Subject>) request.getAttribute("subjects");
 
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Import
-									File</label> <input type="file" class="form-control" name="import_file"
-									placeholder="Upload CSV file">
+									File</label> <input type="file" class="form-control required" name="import_file"
+									placeholder="Upload CSV file" accept=".csv" required>
 							</div>
 
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Exam
-									Date</label> <input type="date" class="form-control"
+									Date</label> <input type="datetime-local" class="form-control"
 									id="validationDefault01" name="examDate" required>
 							</div>
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Exam
-									Time</label> <input type="time" class="form-control" name="actualTime"
+									Time</label> <input type="number" class="form-control" name="actualTime"
                                         required>
 							</div>
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Login
-									Time</label> <input type="time" class="form-control"
+									Time</label> <input type="number" class="form-control"
 									id="validationDefault01" name="loginTime" required>
 							</div>
-
+							
+							<div class="col-md-6">
+								<label for="validationDefault01" class="form-label">Total Marks
+								</label> <input type="number" class="form-control"
+									id="validationDefault01" name="marks" required>
+							</div>
 
 							<div class="col-md-6">
 								<label for="validationDefault01" class="form-label">Exam

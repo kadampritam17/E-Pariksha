@@ -1,6 +1,5 @@
 package com.java.epariksha.entity;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -88,24 +87,38 @@ public class Exam {
 		super();
 	}
 
-
-	public Exam(int examId, String examName, Date examDate, int noOfQuestion, int marks, int actualTime,
-			int loginTime, Boolean examStatus, String examLevel) {
+//
+//	public Exam(int examId, String examName, Date examDate, int noOfQuestion, int marks, int actualTime,
+//			int loginTime, Boolean examStatus, String examLevel) {
+//		super();
+//		this.examId = examId;
+//		this.examName = examName;
+//		this.examDate = examDate;
+//		this.noOfQuestion = noOfQuestion;
+//		this.marks = marks;
+//		this.actualTime = actualTime;
+//		this.loginTime = loginTime;
+//		this.examStatus = examStatus;
+//		this.examLevel = examLevel;
+//	}
+	
+	// used in examDaoImpl
+	public Exam(Subject subject, Teacher teacher, int actualTime, Date newexamdate, String examLevel,
+			String examName, int noOfQue, int loginTime, int marks) {
 		super();
-		this.examId = examId;
 		this.examName = examName;
-		this.examDate = examDate;
-		this.noOfQuestion = noOfQuestion;
+		this.examDate = newexamdate;
+		this.noOfQuestion = noOfQue;
 		this.marks = marks;
 		this.actualTime = actualTime;
 		this.loginTime = loginTime;
-		this.examStatus = examStatus;
+		this.examStatus = true;
 		this.examLevel = examLevel;
+		this.subject=subject;
+		this.teacher=teacher;
 	}
 
 
-	
-	
 	public List<Question> getQuestionInfoTbl() {
 		return questionInfoTbl;
 	}

@@ -45,9 +45,9 @@
     <div class="container d-flex align-items-center"><img src="login/images/Logo.jpg" alt="" width="50" height="200"
         class="img-fluid">
 
-      <h1 class="logo me-auto"><a href="index.html">&nbsp; E-PARIKSHA</a></h1>
+      <h1 class="logo me-auto"><a href="index">&nbsp; E-PARIKSHA</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html" class="logo me-auto"></a>
+      <a href="index" class="logo me-auto"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -58,7 +58,11 @@
             <ul>
               <li><a href="admin_login">Admin</a></li>
               <li><a href="teacher_login">Teacher</a></li>
+<<<<<<< HEAD
               <li><a href="http://localhost:3000">Student</a></li>
+=======
+              <li><a href="http://localhost:3000">Student</a> </li><!-- alt="student_login" -->
+>>>>>>> c93daf7deff7d777e509ab9198cc9c8c4cf9a0ed
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -100,9 +104,9 @@
           <h2>About Us</h2>
         </div>
 
-        <p> &nbsp;The first thing when you conduct the online exams isÂ easy scheduling and planning. The management team
+        <p> &nbsp;The first thing when you conduct the online exams is easy scheduling and planning. The management team
           generally discusses and plans the timetable of the exams, All the teachers will be documented in the system.
-          Moreover, in theÂ online exam system, the teachers can plan, prepare and publish the exams in advance, hence on
+          Moreover, in the online exam system, the teachers can plan, prepare and publish the exams in advance, hence on
           configured dates only tests will be enabled to the students.</p>
         <p> Today Online Examination System has become fast growing examination method because of its speed and
           accuracy. Online Examination System is the simplest to use web-based application for institute, completely
@@ -133,11 +137,11 @@
           <ul>
             <li data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                data-bs-target="#faq-list-1">How many attempt that I can take the exam? <i
+                data-bs-target="#faq-list-1">How many attempts for the exam? <i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse " data-bs-parent=".faq-list">
                 <p>
-                  Only once.
+                  One attempt for each subject, if student fails new exam test can be assigneed after some time. 
                   <!--  However, students who miss the exam (never start the exam) can contact the teacher personally for requesting re-open of exams. As for students who already taken the exam, they cannot take the re-open exam. -->
                 </p>
               </div>
@@ -145,53 +149,45 @@
 
             <li data-aos="fade-up" data-aos-delay="200">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
-                class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i
+                class="collapsed">I am unable to login? <i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  Please check your internet connection for it and recheck whether you are using the
+                  correct user name and password.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
-                class="collapsed">Dolor sit amet consectetur adipiscing elit? <i
+                class="collapsed">When is the result displayed? <i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
-                  integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
-                  Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi
-                  quis
+                  Result is displayed as soon as exam is over.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
-                class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i
+                class="collapsed">Is clock timer available in exam portal? <i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
-                  vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
-                  gravida quis blandit turpis cursus in.
+                 Yes clock timer is available and it automatically submit your exam after time is over.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="500">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5"
-                class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem
-                dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                class="collapsed">Can i take break during exam?
+             <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
-                  nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
-                  tellus in metus vulputate eu scelerisque.
+                  No
                 </p>
               </div>
             </li>
@@ -218,7 +214,10 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A-123 MG Road, Pune, PU 535022</p>
+                <p>
+                <a href="https://www.google.com/search?sa=X&rlz=1C1CHBF_enIN989IN990&biw=1536&bih=746&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WBuzwMd3VuHAwKZ-YHQ16wtBhGwbRg:1648907762302&q=iet+pune+shivaji+nagar&rflfq=1&num=10&rldimm=10357443456412161594#rlfi=hd:;si:10357443456412161594;mv:[[18.530841515410728,73.8363458286583],[18.52784057942662,73.83035913813706],null,[18.529341054003716,73.83335248339768],18]">
+              A-401 Model Colony Shivajinagar, Pune 411016 </a>
+                </p>
               </div>
 
               <div class="email">
@@ -234,7 +233,7 @@
               </div>
 
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTT8oYEbQAE-kno2VLb3zln2DtVo3c4wc&q=IET%20C-DAC%20ACTS%20ATC,%20Pune"
                 frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
@@ -306,12 +305,12 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Design by</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Abhijit Mutkule</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Chandrakant Padme</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Pooja Patil</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Pritam Kadam</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Sagar Thorat</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Sumit Bonde</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://github.com/kadampritam17">Pritam Kadam</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://github.com/sumit27b">Sumit Bonde</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://github.com/poojaxxi">Pooja Patil</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://github.com/ChandrakantPadme">Chandrakant Padme</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://github.com/abhi9055">Abhijit Mutkule</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://github.com/SagarThorat123">Sagar Thorat</a></li>
             </ul>
           </div>
 

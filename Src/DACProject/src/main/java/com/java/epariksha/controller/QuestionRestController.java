@@ -7,13 +7,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.java.epariksha.dao.QuestionDAOImpl;
-import com.java.epariksha.entity.Question;
 import com.java.epariksha.entity.Question;
 
 @CrossOrigin
@@ -23,19 +19,32 @@ public class QuestionRestController {
 	@Autowired
 	QuestionDAOImpl dao;
 
+<<<<<<< HEAD
 	
 	@GetMapping("/admin/questions")
+=======
+	//done
+	@GetMapping("/admin/getquestions")
+>>>>>>> c93daf7deff7d777e509ab9198cc9c8c4cf9a0ed
 	public List<Question> admin_question() {
 		return dao.getAll();
 	}
 	
+<<<<<<< HEAD
 	
+=======
+	//wrong
+>>>>>>> c93daf7deff7d777e509ab9198cc9c8c4cf9a0ed
 //	@PostMapping("/admin/question_add") 
 //	public String question_add(@RequestBody Question que)
 //	{
 //		return dao.save(que);
 //	}
+<<<<<<< HEAD
 //	
+=======
+	
+>>>>>>> c93daf7deff7d777e509ab9198cc9c8c4cf9a0ed
 
 	/*
 	 * @PostMapping("/admin/question_add") public ModelAndView question_add(

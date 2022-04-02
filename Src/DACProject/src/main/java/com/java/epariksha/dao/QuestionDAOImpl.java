@@ -19,8 +19,14 @@ public class QuestionDAOImpl implements QuestionDAO {
 		return questionRepository.findAll();
 	}
 	
+<<<<<<< HEAD
 	
 	public Object save(Question que) {
+=======
+	//done
+	public Object save(Question que) {
+		
+>>>>>>> c93daf7deff7d777e509ab9198cc9c8c4cf9a0ed
 		return questionRepository.save(que);
 	}
 }

@@ -14,7 +14,7 @@ import com.java.epariksha.entity.Teacher;
 public interface TeacherRepository extends JpaRepository<Teacher, Integer>
 {
 	//Query using Hibernate Query Language
-	 @Query(value="select * from teacher_info_tbl a where a.teacher_email_id =:username and a.teacher_password=:password",nativeQuery=true)
+	 @Query(value="select * from teacher_info_tbl a where a.teacher_username =:username and a.teacher_password=:password",nativeQuery=true)
 	 public List<Teacher> findTeacherByUsernameAndPassword(@PathVariable("username") String username,@PathVariable("password") String password);
 	 
 	//count of teachers

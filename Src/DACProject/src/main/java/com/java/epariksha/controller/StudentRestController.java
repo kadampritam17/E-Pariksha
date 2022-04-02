@@ -1,7 +1,5 @@
 package com.java.epariksha.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -17,15 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.java.epariksha.dao.LoginDAO;
 import com.java.epariksha.dao.StudentDAOImpl;
 import com.java.epariksha.entity.Student;
-import com.java.epariksha.entity.Teacher;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c93daf7deff7d777e509ab9198cc9c8c4cf9a0ed
 @CrossOrigin
 @RestController
 public class StudentRestController {
 
 	@Autowired
 	LoginDAO loginDao;
-	
+
 	@Autowired
 	StudentDAOImpl studentDao;
 	//--------------------------------------------------------------
@@ -41,7 +42,11 @@ public class StudentRestController {
 		if(stud != null)
 		{
 			request.getSession().setAttribute("student", stud);
+<<<<<<< HEAD
 			System.out.println("student login success");
+=======
+			//	System.out.println("student login success");
+>>>>>>> c93daf7deff7d777e509ab9198cc9c8c4cf9a0ed
 			return stud;
 		}
 		else
@@ -49,8 +54,17 @@ public class StudentRestController {
 			System.out.println("error");
 			return null;
 		}
-		
+
 	}
+
+	
+	//test plz
+	@RequestMapping(value = "/student/logout", method = RequestMethod.GET)
+	public String teacherlogout(HttpServletRequest request) {
+		request.getSession().invalidate();
+		return "success";
+	}
+	
 
 
 	//test plz

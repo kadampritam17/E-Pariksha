@@ -23,10 +23,18 @@ public class StudentDAOImpl implements StudentDAO {
 	public Student getDetails(int studentId) {
 		return studentRepository.findById(studentId).get();	}
 
+<<<<<<< HEAD
 //	//for React
 //	
 //	public Object save(Student stud) {
 //		return studentRepository.save(stud);
 //	}
+=======
+	public Student save(Student student) 
+	{
+		return studentRepository.save(student);
+	}
+
+>>>>>>> c93daf7deff7d777e509ab9198cc9c8c4cf9a0ed
 
 }

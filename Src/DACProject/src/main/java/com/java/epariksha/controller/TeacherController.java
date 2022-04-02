@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -23,6 +24,7 @@ import com.java.epariksha.entity.Subject;
 import com.java.epariksha.entity.Teacher;
 
 @Controller
+@Scope("session")
 public class TeacherController {
 
 
@@ -49,7 +51,7 @@ public class TeacherController {
 	}
 
 
-	//working
+	//done
 	@GetMapping("/admin/teacher_add")
 	public ModelAndView admin_teacher_add() 
 	{
@@ -59,7 +61,7 @@ public class TeacherController {
 		return mv;
 	}
 
-	//working
+	//done
 	@PostMapping("/admin/teacher_add") 
 	public ModelAndView teacher_add(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName, @RequestParam("mobileNo") long mobileNo, @RequestParam("dob") String dob, @RequestParam("userName")String userName, @RequestParam("password") String password, @RequestParam("emailId")String emailId, @RequestParam("")String qualification,@RequestParam("")int experience, @RequestParam("subjectList") ArrayList<Subject> subjectList ) throws ParseException 
 	{
@@ -88,22 +90,35 @@ public class TeacherController {
 		return mv;
 	}
 
-	@PostMapping("/profile")
-	public ModelAndView update(@RequestParam ("firstName") String fistName, @RequestParam ("lastName") String lastName, @RequestParam ("mobno") long mobNo, @RequestParam ("username") String userName, @RequestParam ("email") String email, @RequestParam ("qualification") String qualification, @RequestParam ("experience") int experience)
+//	@PostMapping("/profile")
+//	public ModelAndView update(@RequestParam ("firstName") String fistName, @RequestParam ("lastName") String lastName, @RequestParam ("mobno") long mobNo, @RequestParam ("username") String userName, @RequestParam ("email") String email, @RequestParam ("qualification") String qualification, @RequestParam ("experience") int experience)
+//	{
+//		Teacher teacher = new Teacher();
+//		teacher.setFirstName(fistName);
+//		teacher.setLastName(lastName);
+//		teacher.setMobileNo(mobNo);
+//		teacher.setUserName(userName);
+//		teacher.setEmailId(email);
+//		teacher.setQualification(qualification);
+//		teacher.setExperience(experience);
+//
+//		mv.addObject("teacher", dao.update(teacher)); //request.setAttribute
+//		mv.setViewName("redirect:/teacher/profile");
+//
+//
+//		return mv;
+//	}
+
+	@PostMapping("/teacher_profile")
+	public ModelAndView update(@ModelAttribute("updateTeacher")Teacher teacher,HttpServletRequest request)
 	{
-		Teacher teacher = new Teacher();
-		teacher.setFirstName(fistName);
-		teacher.setLastName(lastName);
-		teacher.setMobileNo(mobNo);
-		teacher.setUserName(userName);
-		teacher.setEmailId(email);
-		teacher.setQualification(qualification);
-		teacher.setExperience(experience);
-
-		mv.addObject("teacher", dao.update(teacher)); //request.setAttribute
-		mv.setViewName("redirect:/teacher/profile");
-
-
+		HttpSession session = request.getSession();
+		Teacher teacher1 = (Teacher)session.getAttribute("teacher");
+		mv.addObject("teach", teacher1);//request.setAttribute (session data)
+		dao.update(teacher);
+		mv.addObject("teacher",teacher);
+		mv.setViewName("redirect:/teacher/teacher_profile");
+		
 		return mv;
 	}
 

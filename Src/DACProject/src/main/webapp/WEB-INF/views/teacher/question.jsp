@@ -22,7 +22,7 @@ List<Question> list = (List<Question>) request.getAttribute("questions");
 		<h1>Question</h1>
 		<nav>
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="teacher/home">Home</a></li>
+				<li class="breadcrumb-item"><a href="home">Home</a></li>
 				<li class="breadcrumb-item active"><a href="question">Question</a></li>
 			</ol>
 		</nav>

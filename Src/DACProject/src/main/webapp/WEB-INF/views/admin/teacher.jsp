@@ -22,7 +22,7 @@
 		<h1>Teacher</h1>
 		<nav>
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="admin/home">Home</a></li>
+				<li class="breadcrumb-item"><a href="home">Home</a></li>
 				<li class="breadcrumb-item active"><a href="teacher">Teacher</a></li>
 			</ol>
 		</nav>
@@ -74,10 +74,11 @@
 									<td scope="col"><%=al.getEmailId()%></td>
 									<td scope="col"><%=al.getQualification()%></td>
 									<td scope="col"><%=al.getExperience()%></td>
-									<td scope="col"><a href="teacher_update"
-										class="btn btn-primary"><i class="bi-pencil"></i></a><a href="#"
-										class="btn btn-danger"><i class="bi-trash"></i></a></td>
-								</tr>
+									<td scope="col">
+									 
+									 <!-- <a href="teacher_update" class="btn btn-primary "><i class="bi-pencil"></i></a> -->
+										<a href="#" class="btn btn-danger"><i class="bi-trash"></i></a></td>
+									</tr>
 								<%
 								}
 								%>

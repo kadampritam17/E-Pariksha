@@ -22,7 +22,7 @@ List<Question> list = (List<Question>) request.getAttribute("questions");
 		<h1>Question</h1>
 		<nav>
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="admin/home">Home</a></li>
+				<li class="breadcrumb-item"><a href="home">Home</a></li>
 				<li class="breadcrumb-item active"><a href="question">Question</a></li>
 			</ol>
 		</nav>
@@ -68,8 +68,10 @@ List<Question> list = (List<Question>) request.getAttribute("questions");
 									<td scope="col"><%=al.getOption3()%></td>
 									<td scope="col"><%=al.getOption4()%></td>
 									<td scope="col"><%=al.getAnswer()%></td>
-									<td scope="col"><a href="question_update"
-										class="btn btn-primary "><i class="bi-pencil"></i></a><a
+									<td scope="col">
+									<!-- <a href="question_update"
+										class="btn btn-primary "><i class="bi-pencil"></i></a> -->
+										<a
 										href="#" class="btn btn-danger"><i class="bi-trash"></i></a></td>
 								</tr>
 								<%
