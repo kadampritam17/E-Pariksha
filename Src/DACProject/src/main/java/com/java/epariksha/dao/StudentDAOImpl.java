@@ -23,6 +23,10 @@ public class StudentDAOImpl implements StudentDAO {
 		return studentRepository.findById(studentId).get();
 	}
 
-	
+	public Student save(Student student) 
+	{
+		return studentRepository.save(student);
+	}
+
 
 }

@@ -33,11 +33,22 @@ public class TeacherDAOImpl  {
 	}
 
 
-	//for profile update
-	public Teacher update(Teacher teacher)
+	//for profile update //pending
+	public void update(Teacher teacher)
 	{
-		return teacherRepository.save(teacher);
+		Teacher updateTeacher = teacherRepository.findById(teacher.getTeacherId()).get();
+		updateTeacher.setFirstName(teacher.getFirstName());
+		updateTeacher.setLastName(teacher.getLastName());
+		updateTeacher.setMobileNo(teacher.getMobileNo());
+		updateTeacher.setDob(teacher.getDob());
+		updateTeacher.setUserName(teacher.getUserName());
+		updateTeacher.setEmailId(teacher.getEmailId());
+		updateTeacher.setQualification(teacher.getQualification());
+		updateTeacher.setExperience(teacher.getExperience());
+		
+		teacherRepository.save(updateTeacher);
 	}
+
 
 	//to add new teacher
 	public Teacher add(String firstName, String lastName, long mobileNo, Date birthdate, String userName, String password,

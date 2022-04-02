@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <header id="header" class="header fixed-top d-flex align-items-center">
 	<div class="d-flex align-items-center justify-content-between">
-		<i class="bi bi-list toggle-sidebar-btn"></i> <a href="index.html"
+		<i class="bi bi-list toggle-sidebar-btn"></i> <a href="/admin/home"
 			class="logo d-flex align-items-center"> <img
 			src="../home_assets/img/EPariksha.png" alt=""> <span
 			class="d-none d-lg-block">E-Pariksha</span>
@@ -23,7 +23,7 @@
 				<ul
 					class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
 					<li class="dropdown-header">
-						<h6>Admin</h6> <span>Web Designer</span>
+						<h6>Admin</h6> <!-- <span>Web Designer</span> -->
 					</li>
 					<li>
 						<hr class="dropdown-divider">

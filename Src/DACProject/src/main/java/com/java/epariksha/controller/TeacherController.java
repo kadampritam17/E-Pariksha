@@ -90,22 +90,35 @@ public class TeacherController {
 		return mv;
 	}
 
-	@PostMapping("/profile")
-	public ModelAndView update(@RequestParam ("firstName") String fistName, @RequestParam ("lastName") String lastName, @RequestParam ("mobno") long mobNo, @RequestParam ("username") String userName, @RequestParam ("email") String email, @RequestParam ("qualification") String qualification, @RequestParam ("experience") int experience)
+//	@PostMapping("/profile")
+//	public ModelAndView update(@RequestParam ("firstName") String fistName, @RequestParam ("lastName") String lastName, @RequestParam ("mobno") long mobNo, @RequestParam ("username") String userName, @RequestParam ("email") String email, @RequestParam ("qualification") String qualification, @RequestParam ("experience") int experience)
+//	{
+//		Teacher teacher = new Teacher();
+//		teacher.setFirstName(fistName);
+//		teacher.setLastName(lastName);
+//		teacher.setMobileNo(mobNo);
+//		teacher.setUserName(userName);
+//		teacher.setEmailId(email);
+//		teacher.setQualification(qualification);
+//		teacher.setExperience(experience);
+//
+//		mv.addObject("teacher", dao.update(teacher)); //request.setAttribute
+//		mv.setViewName("redirect:/teacher/profile");
+//
+//
+//		return mv;
+//	}
+
+	@PostMapping("/teacher_profile")
+	public ModelAndView update(@ModelAttribute("updateTeacher")Teacher teacher,HttpServletRequest request)
 	{
-		Teacher teacher = new Teacher();
-		teacher.setFirstName(fistName);
-		teacher.setLastName(lastName);
-		teacher.setMobileNo(mobNo);
-		teacher.setUserName(userName);
-		teacher.setEmailId(email);
-		teacher.setQualification(qualification);
-		teacher.setExperience(experience);
-
-		mv.addObject("teacher", dao.update(teacher)); //request.setAttribute
-		mv.setViewName("redirect:/teacher/profile");
-
-
+		HttpSession session = request.getSession();
+		Teacher teacher1 = (Teacher)session.getAttribute("teacher");
+		mv.addObject("teach", teacher1);//request.setAttribute (session data)
+		dao.update(teacher);
+		mv.addObject("teacher",teacher);
+		mv.setViewName("redirect:/teacher/teacher_profile");
+		
 		return mv;
 	}
 

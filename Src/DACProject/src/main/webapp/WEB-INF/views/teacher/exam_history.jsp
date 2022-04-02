@@ -19,7 +19,7 @@
 		<h1>Exam History</h1>
 		<nav>
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="teacher/home">Home</a></li>
+				<li class="breadcrumb-item"><a href="home">Home</a></li>
 				<li class="breadcrumb-item active"><a href="exam_history">Exam
 						History</a></li>
 			</ol>

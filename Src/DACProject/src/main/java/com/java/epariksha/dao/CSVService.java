@@ -18,11 +18,11 @@ public class CSVService {
   @Autowired
   CSVRepository repository;
 
-  public int save(MultipartFile file,Subject subject) {
+  public List<Question> save(MultipartFile file,Subject subject) {
     try {
       List<Question> tutorials = CSVHelper.csvToTutorials(file.getInputStream(), subject);
       repository.saveAll(tutorials);
-      return tutorials.size();
+      return tutorials;
     } catch (IOException e) {
       throw new RuntimeException("fail to store csv data: " + e.getMessage());
     }

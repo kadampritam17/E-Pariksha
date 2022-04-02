@@ -40,7 +40,7 @@ public class LoginController {
 	}
 	
 	
-	
+	//done
 	@PostMapping("/admin/home")
 	public ModelAndView admin_login(@RequestParam String username, @RequestParam String password, HttpSession session)
 	{
@@ -78,6 +78,7 @@ public class LoginController {
 	}
 	
 	
+
 	//done
 	@PostMapping("/teacher/home")
 	public ModelAndView teacher_login(@RequestParam String username, @RequestParam String password, HttpServletRequest request)
@@ -89,7 +90,10 @@ public class LoginController {
 		{
 			request.getSession().setAttribute("teacher",teacher);
 //			session.setAttribute("teacher", teacher);
+			mv.addObject("teach", teacher);//request.setAttribute (session data)
+
 			mv.setViewName("teacher/home");
+			
 			return mv;
 		}
 		else

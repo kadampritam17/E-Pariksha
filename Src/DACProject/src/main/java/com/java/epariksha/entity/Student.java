@@ -65,10 +65,9 @@ public class Student {
 	@Column(name = "student_degree_percentage")  //int
 	private double degreePercentage;
 	
-	
-	@Column(name = "student_is_active")  //boolean
+	@Column(name = "student_is_active", columnDefinition = "bit default 0x01")  //boolean
 	private boolean isActive;
-	
+		
 	
 	public Student() {
 		super();

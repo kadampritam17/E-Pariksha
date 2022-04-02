@@ -19,9 +19,9 @@ public class QuestionDAOImpl implements QuestionDAO {
 		return questionRepository.findAll();
 	}
 	
-	
-	public String save(Question que) {
-		questionRepository.save(que);
-		return "success";
+	//done
+	public Object save(Question que) {
+		
+		return questionRepository.save(que);
 	}
 }
