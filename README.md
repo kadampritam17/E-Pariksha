@@ -1,6 +1,6 @@
 <h1 align="center"> E-Pariksha   </h1>
 <p align="center">
-<img height="300" width="300"  src="https://github.com/kadampritam17/E-Pariksha/blob/main/Documentation/E-Pariksha-Logo.jpeg">
+<img height="300" width="300"  src="https://github.com/kadampritam17/E-Pariksha/blob/main/E-Pariksha/Documentation/E-Pariksha-Logo.jpeg">
 </p>
 
 
