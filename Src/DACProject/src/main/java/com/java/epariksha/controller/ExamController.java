@@ -42,14 +42,14 @@ public class ExamController {
 
 	@Autowired
 	SubjectDAOImpl subDAO;
-	
+
 	@Autowired
 	TeacherDAOImpl TeacherDAO;
-	
+
 	@Autowired
-	  CSVService fileService;
-	
-	
+	CSVService fileService;
+
+
 	ModelAndView mv = new ModelAndView(); 
 
 	//--------------------------------------------------------------
@@ -69,7 +69,7 @@ public class ExamController {
 	//------------------------------------------------------------------
 	//	TEACHER CONTROLLERS
 
-	
+
 	//working
 	@GetMapping("/teacher/exam_add")
 	public ModelAndView teacher_exam_add(HttpServletRequest request) 
@@ -78,54 +78,53 @@ public class ExamController {
 		Teacher teacher = (Teacher)session.getAttribute("teacher");
 
 		List<Subject> list = subDAO.getAll();
-	
+
 		mv.addObject("teach", teacher);//request.setAttribute (session data)
 		mv.addObject("subjects", list); //request.setAttribute
 		mv.setViewName("teacher/exam_add");
 		return mv;
 	}
-	
-	
+
+
 	@PostMapping("/teacher/exam_add") 
 	public ModelAndView exam_add(@RequestParam("subject") Subject subject, @RequestParam("teacher") Teacher teacher, @RequestParam("examName") String examName, @RequestParam("import_file") MultipartFile importFile, @RequestParam("examDate") String examDate, @RequestParam("actualTime") int actualTime, @RequestParam("loginTime") int loginTime,@RequestParam("marks") int marks, @RequestParam("examLevel") String examLevel) throws ParseException 
 	{
 		Date newexamdate=new SimpleDateFormat("yyyy-MM-dd").parse(examDate);
-//		System.out.println( "this is exam constructor"+ subject + " " + teacher  + " " + examName + " " + importFile + " " + newexamdate + " " + actualTime + " " + loginTime + " " + examLevel  );
-		
+		//		System.out.println( "this is exam constructor"+ subject + " " + teacher  + " " + examName + " " + importFile + " " + newexamdate + " " + actualTime + " " + loginTime + " " + examLevel  );
+
 		List<Question> queList = uploadFile(importFile, subject);
 		int noOfQue = queList.size();
-		
-		
-//		dao.add(subject,teacher,examName,examDate, actualTime, loginTime, examLevel,noOfQue,queList);
+
+		//		dao.add(subject,teacher,examName,examDate, actualTime, loginTime, examLevel,noOfQue,queList);
 
 		mv.addObject("exam", dao.add(subject,teacher,examName,newexamdate, actualTime, loginTime, examLevel,noOfQue,queList,marks)); //request.setAttribute
 		mv.setViewName("redirect:/teacher/exam");
 		return mv;
 	}
-	
-	
-	
-	 public List<Question> uploadFile(MultipartFile file,Subject subject) {
-		    String message = "";
-		    List<Question> questionCount= new ArrayList();
-		    if (CSVHelper.hasCSVFormat(file)) {
-		      try {
-		        questionCount = fileService.save(file,subject);
 
-		        message = "Uploaded the file successfully: " + file.getOriginalFilename();
-		        
-		      } catch (Exception e) {
-		        message = "Could not upload the file: " + file.getOriginalFilename() + "!";
-		        return questionCount;
-		      }
-		    }
-		    return questionCount;
-	 }
-	
-	
-	
-	
-	
+
+
+	public List<Question> uploadFile(MultipartFile file,Subject subject) {
+		String message = "";
+		List<Question> questionCount= new ArrayList();
+		if (CSVHelper.hasCSVFormat(file)) {
+			try {
+				questionCount = fileService.save(file,subject);
+
+				message = "Uploaded the file successfully: " + file.getOriginalFilename();
+
+			} catch (Exception e) {
+				message = "Could not upload the file: " + file.getOriginalFilename() + "!";
+				return questionCount;
+			}
+		}
+		return questionCount;
+	}
+
+
+
+
+
 	//done
 	@GetMapping("/teacher/exam")
 	public ModelAndView teacher_exam(HttpServletRequest request) 
