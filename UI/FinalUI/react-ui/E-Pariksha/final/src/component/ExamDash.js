@@ -37,7 +37,7 @@ export default function ExamHistory() {
             <ul class="d-flex align-items-center">
               <li class="nav-item dropdown pe-3">
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                  <img src="assets/img/profile.jfif" alt="Profile" class="rounded-circle" />
+                  <img src="assets/img/admin.jpg" alt="Profile" class="rounded-circle" />
                   <span class="d-none d-md-block dropdown-toggle ps-2">Student</span>
                 </a>
                 {/* <!-- End Profile Image Icon --> */}
@@ -59,7 +59,7 @@ export default function ExamHistory() {
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item d-flex align-items-center" href="#">
+                    <a class="dropdown-item d-flex align-items-center" href="http://localhost:8081">
                       <i class="bi bi-box-arrow-right"></i>
                       <span>Sign Out</span>
                     </a>
@@ -102,11 +102,11 @@ export default function ExamHistory() {
         {/* End Sidebar */}
         <main id="main" class="main">
           <div class="pagetitle">
-            <h1>Exam History</h1>
+            <h1>Exam</h1>
             <nav>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><button style={{ 'border': 'none' }} onClick={dashboard}>Home</button></li>
-                <li class="breadcrumb-item active"><button style={{ 'border': 'none' }} onClick={examHistory}>Exam History</button></li>
+                <li class="breadcrumb-item active"><button style={{ 'border': 'none' }} onClick={examDash}>Exam</button></li>
               </ol>
             </nav>
           </div>
@@ -130,27 +130,27 @@ export default function ExamHistory() {
                         <tr>
                           <th scope="row">1</th>
                           <td>Advanced Java</td>
-                          <td>2016-05-25</td>
+                          <td>2022-05-25</td>
                         </tr>
                         <tr>
                           <th scope="row">2</th>
                           <td>Operating System</td>
-                          <td>2014-12-05</td>
+                          <td>2022-12-05</td>
                         </tr>
                         <tr>
                           <th scope="row">3</th>
                           <td>Software Development Methodologies</td>
-                          <td>2011-08-12</td>
+                          <td>2022-08-12</td>
                         </tr>
                         <tr>
                           <th scope="row">4</th>
                           <td>Web Programming Technologies</td>
-                          <td>2012-06-11</td>
+                          <td>2022-06-11</td>
                         </tr>
                         <tr>
                           <th scope="row">5</th>
                           <td>Database Technologies</td>
-                          <td>2011-04-19</td>
+                          <td>2022-04-19</td>
                         </tr>
                       </tbody>
                     </table>

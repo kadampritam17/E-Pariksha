@@ -5,7 +5,7 @@ import StudentLogin from './component/StudentLogin';
 import SignUp from './component/SignUp';
 import StudentDashboard from './component/StudentDashboard';
 import ExamDash from './component/ExamDash';
-import ExamHistory from './component/ExamDash';
+import ExamHistory from './component/ExamHistory';
 import StudentProfile from './component/StudentProfile';
 import Exam from './component/Exam';
 import Result from './component/Result';

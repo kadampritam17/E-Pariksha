@@ -35,14 +35,14 @@ export default function ExamHistory() {
             <ul class="d-flex align-items-center">
               <li class="nav-item dropdown pe-3">
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                  <img src="assets/img/profile.jfif" alt="Profile" class="rounded-circle" />
+                  <img src="assets/img/admin.jpg" alt="Profile" class="rounded-circle" />
                   <span class="d-none d-md-block dropdown-toggle ps-2">Student</span>
                 </a>
                 {/* <!-- End Profile Image Icon --> */}
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                   <li class="dropdown-header">
                     <h6>XYZ</h6>
-                    <span>Web Designer</span>
+                    <span>Student</span>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
@@ -57,7 +57,7 @@ export default function ExamHistory() {
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item d-flex align-items-center" href="#">
+                    <a class="dropdown-item d-flex align-items-center" href="http://localhost:8081">
                       <i class="bi bi-box-arrow-right"></i>
                       <span>Sign Out</span>
                     </a>
@@ -126,29 +126,29 @@ export default function ExamHistory() {
                       </thead>
                       <tbody>
                         <tr>
-                          <td scope="col">Exam Name</td>
-                          <td scope="col">Date</td>
-                          <td scope="col">Marks</td>
+                          <td scope="col">Concept Of Programming</td>
+                          <td scope="col">2022-02-21</td>
+                          <td scope="col">30</td>
                         </tr>
                         <tr>
-                          <td scope="col">Exam Name</td>
-                          <td scope="col">Date</td>
-                          <td scope="col">Marks</td>
+                          <td scope="col">Data Structure</td>
+                          <td scope="col">2022-03-31</td>
+                          <td scope="col">35</td>
                         </tr>
                         <tr>
-                          <td scope="col">Exam Name</td>
-                          <td scope="col">Date</td>
-                          <td scope="col">Marks</td>
+                          <td scope="col">Advanced Java</td>
+                          <td scope="col">2022-02-11</td>
+                          <td scope="col">30</td>
                         </tr>
                         <tr>
-                          <td scope="col">Exam Name</td>
-                          <td scope="col">Date</td>
-                          <td scope="col">Marks</td>
+                          <td scope="col">MS .Net</td>
+                          <td scope="col">2022-03-21</td>
+                          <td scope="col">35</td>
                         </tr>
                         <tr>
-                          <td scope="col">Exam Name</td>
-                          <td scope="col">Date</td>
-                          <td scope="col">Marks</td>
+                          <td scope="col">Core Java</td>
+                          <td scope="col">2022-06-11</td>
+                          <td scope="col">38</td>
                         </tr>
                       </tbody>
                     </table>
