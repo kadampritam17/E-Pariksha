@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import Axios from 'axios'
-const API_URL = "http://localhost:8081/admin/questions";
+const API_URL = "http://localhost:8081/admin/getquestions";
 
 export default function ButtonGenerator(props) {
 

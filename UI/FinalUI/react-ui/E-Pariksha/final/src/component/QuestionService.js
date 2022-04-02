@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import QuestionF from './QuestionF';
 
 
-const API_URL = "http://localhost:8081/admin/questions";
+const API_URL = "http://localhost:8081/admin/getquestions";
 
 function QuestionService(props) {
 
