@@ -39,7 +39,7 @@ public class Question {
 	@LazyCollection(LazyCollectionOption.FALSE)
     private List<Exam> examList = new ArrayList<>();
 	
-	
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name="subject_id")
 	private Subject subject;
