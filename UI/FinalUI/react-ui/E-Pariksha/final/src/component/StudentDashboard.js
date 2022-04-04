@@ -42,7 +42,7 @@ export default function StudentDashboard() {
                 {/* <!-- End Profile Image Icon --> */}
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                   <li class="dropdown-header">
-                    <h6>XYZ</h6>
+                    <h6>Sumit Bonde</h6>
                     <span>Student</span>
                   </li>
                   <li>
@@ -117,9 +117,9 @@ export default function StudentDashboard() {
                   <div class="card-body">
                     <h4 class="card-title">Today's Exam</h4>
                     <center>
-                      <img src="assets/img/exam.png" style={{ 'height': '100px', 'width': '100px' }}></img>
+                      <img src="assets/img/exam.png" style={{ 'height': '100px', 'width': '100px' }} alt="Exam"></img>
                       <h5 class="card-title">Exam Name: </h5>
-                      <h2 >Advanced Java</h2>
+                      <h2 >Web Programming Technology</h2>
                       <Link to="/Start">
                         <button type="button" class="btn btn-lg" style={{ 'background-color': '#37517e', 'color': 'white' }}>Start Exam</button>
                       </Link>

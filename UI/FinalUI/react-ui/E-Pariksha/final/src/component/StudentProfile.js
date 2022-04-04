@@ -131,11 +131,11 @@ export default function StudentProfile() {
                         <h5 class="card-title">Profile Details</h5>
                         <div class="row">
                           <div class="col-lg-3 col-md-4 label ">First Name</div>
-                          <div class="col-lg-9 col-md-8">Pooja</div>
+                          <div class="col-lg-9 col-md-8">Sumit</div>
                         </div>
                         <div class="row">
                           <div class="col-lg-3 col-md-4 label ">Last Name</div>
-                          <div class="col-lg-9 col-md-8">Patil</div>
+                          <div class="col-lg-9 col-md-8">Bonde</div>
                         </div>
                         <div class="row">
                           <div class="col-lg-3 col-md-4 label">Mobile Number</div>
@@ -143,15 +143,15 @@ export default function StudentProfile() {
                         </div>
                         <div class="row">
                           <div class="col-lg-3 col-md-4 label">DOB</div>
-                          <div class="col-lg-9 col-md-8">1/1/1001</div>
+                          <div class="col-lg-9 col-md-8">27/12/1995</div>
                         </div>
                         <div class="row">
                           <div class="col-lg-3 col-md-4 label">Username</div>
-                          <div class="col-lg-9 col-md-8">pooja11</div>
+                          <div class="col-lg-9 col-md-8">sumit123</div>
                         </div>
                         <div class="row">
                           <div class="col-lg-3 col-md-4 label">Email</div>
-                          <div class="col-lg-9 col-md-8">pooja@example.com</div>
+                          <div class="col-lg-9 col-md-8">sumit@example.com</div>
                         </div>
                         <div class="row">
                           <div class="col-lg-3 col-md-4 label">SSC Percentage</div>
@@ -172,13 +172,13 @@ export default function StudentProfile() {
                           <div class="row mb-3">
                             <label for="firstName" class="col-md-4 col-lg-3 col-form-label">First Name</label>
                             <div class="col-md-8 col-lg-9">
-                              <input name="firstName" type="text" class="form-control" id="firstName" value="Pooja" />
+                              <input name="firstName" type="text" class="form-control" id="firstName" value="Sumit" />
                             </div>
                           </div>
                           <div class="row mb-3">
                             <label for="lastName" class="col-md-4 col-lg-3 col-form-label">Last Name</label>
                             <div class="col-md-8 col-lg-9">
-                              <input name="lastName" type="text" class="form-control" id="lastName" value="Patil" />
+                              <input name="lastName" type="text" class="form-control" id="lastName" value="Bonde" />
                             </div>
                           </div>
                           <div class="row mb-3">
@@ -190,19 +190,19 @@ export default function StudentProfile() {
                           <div class="row mb-3">
                             <label for="dob" class="col-md-4 col-lg-3 col-form-label">DOB</label>
                             <div class="col-md-8 col-lg-9">
-                              <input name="dob" type="text" class="form-control" id="dob" value="1/1/1001" />
+                              <input name="dob" type="text" class="form-control" id="dob" value="27/12/1995" />
                             </div>
                           </div>
                           <div class="row mb-3">
                             <label for="username" class="col-md-4 col-lg-3 col-form-label">Username</label>
                             <div class="col-md-8 col-lg-9">
-                              <input name="username" type="text" class="form-control" id="username" value="pooja11" />
+                              <input name="username" type="text" class="form-control" id="username" value="sumit123" />
                             </div>
                           </div>
                           <div class="row mb-3">
                             <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                             <div class="col-md-8 col-lg-9">
-                              <input name="email" type="text" class="form-control" id="Email" value="pooja@example.com" />
+                              <input name="email" type="text" class="form-control" id="Email" value="sumit@example.com" />
                             </div>
                           </div>
                           <div class="row mb-3">
