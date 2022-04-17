@@ -23,9 +23,9 @@
  <img src="https://contributors-img.web.app/image?repo=kadampritam17/E-Pariksha" /></h5>
 <div><h6>
 <div align="center">
-           <i class="bx bx-chevron-right"></i> <a href="https://github.com/kadampritam17">|Pritam K|</a>
-              <i class="bx bx-chevron-right"></i> <a href="https://github.com/sumit27b">|Sumit B|</a>
-              <i class="bx bx-chevron-right"></i> <a href="https://github.com/poojaxxi">| Pooja P|</a>
+           <i class="bx bx-chevron-right"></i> <a href="https://github.com/sumit27b">| Sumit B |</a>
+              <i class="bx bx-chevron-right"></i> <a href="https://github.com/kadampritam17">| Pritam K |</a>
+              <i class="bx bx-chevron-right"></i> <a href="https://github.com/poojaxxi">| Pooja P |</a>
               <i class="bx bx-chevron-right"></i> <a href="https://github.com/ChandrakantPadme">|Chandrakant|</a></li>
               <i class="bx bx-chevron-right"></i> <a href="https://github.com/abhi9055">| Abhijit M |</a>
               <i class="bx bx-chevron-right"></i> <a href="https://github.com/SagarThorat123">|Sagar T|</a></h6>
